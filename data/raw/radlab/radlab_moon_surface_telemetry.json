@@ -1,0 +1,21 @@
+[
+  {
+    "record_id": "radlab_lunar_gcr_001",
+    "celestial_body": "Moon",
+    "trajectory": "Surface",
+    "spacecraft": "Chang'e-4 Lander",
+    "instrument_family": "LND (Lunar Lander Neutrons and Dosimetry)",
+    "measurement_target": "Silicon detector",
+    "absorbed_dose_rate_ugy_hr": 13.2,
+    "absorbed_dose_uncertainty_ugy_hr": 1.0,
+    "dose_equivalent_rate_usv_hr": 57.1,
+    "dose_equivalent_uncertainty_usv_hr": 10.6,
+    "quality_factor": 4.32,
+    "observation_period": "2019-2020 Lunar Day/Night Cycles",
+    "source": "NASA OSDR RadLab & Science Advances 2020 (DOI: 10.1126/sciadv.aaz2574)",
+    "classification": "research reference",
+    "origin_type": "measured",
+    "v1_safe": true,
+    "caveats": "Measured in silicon; biological effective dose requires radiation quality factor weighting"
+  }
+]
