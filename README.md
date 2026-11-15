@@ -17,28 +17,21 @@ LunaRangers puts players in the role of a lunar mission crew member. Investigate
 
 ## Architecture
 
-```text
-NASA / research sources + mock data
-              |
-              v
-Python data preparation pipeline
-(ingest, clean, normalize, validate, provenance)
-              |
-              v
-Versioned JSON configuration / fixtures
-              |
-              v
-TypeScript mission simulation engine
-(authoritative state, actions, resources, outcomes)
-              |
-       +------+------+
-       |             |
-       v             v
-React + TypeScript  Unity WebGL
-(UI, HUD, flow)     (3D visualization)
-       |
-       v
-2D practice / fallback experience
+The flowchart below shows how research and prepared data feed the authoritative simulation engine, which drives the player interface and 3D experience. A 2D practice mode is available as a fallback.
+
+```mermaid
+flowchart TD
+    A([Start]) --> B[/NASA research sources and mock data/]
+    B --> C[Python data preparation pipeline]
+    C --> C1[Ingest · Clean · Normalize · Validate · Track provenance]
+    C1 --> D[/Versioned JSON configuration and fixtures/]
+    D --> E[TypeScript mission simulation engine]
+    E --> E1[Manage authoritative state, actions, resources and outcomes]
+    E1 --> F[React + TypeScript interface]
+    E1 --> G[Unity WebGL 3D visualization]
+    F --> H[2D practice / fallback experience]
+    G --> I([Mission experience])
+    H --> I
 ```
 
 - **Python** prepares and validates source data offline. It is not the live gameplay server.
