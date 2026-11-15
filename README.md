@@ -8,9 +8,7 @@ LunaRangers puts players in the role of a lunar mission crew member. Investigate
 
 **Gameplay loop:** Mission → Investigate → Decide → Consequence → Learning.
 
-- **Repository:** https://github.com/Ilmamasroor/lunaRanger
 - **Live demo:** https://lunarangers-mission.vercel.app/
-- **Demo recording:** https://lunarangers-mission.vercel.app/LunaRangers-Integrated-Demo.mp4
 - **Challenge:** NASA Space Apps Challenge — Junior Astronaut Mission Trainer
 
 > **Implementation note:** The repository contains a multi-day Unity campaign and a TypeScript simulation engine. Do not interpret every proposed science scenario, resource dependency, or cross-layer contract in the documentation as fully implemented or scientifically validated. See [implementation status](docs/implementation-status.md).
