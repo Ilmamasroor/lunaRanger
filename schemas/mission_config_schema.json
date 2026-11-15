@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "JuniorAstronautMissionConfig",
+  "description": "Mission configuration produced by the Python science pipeline conforming to the documented TypeScript SimulationParameter contract.",
   "type": "object",
   "required": [
     "schema_version",
@@ -20,47 +21,191 @@
           "type": "integer",
           "minimum": 1
         }
-      }
+      },
+      "additionalProperties": false
     },
     "parameters": {
       "type": "array",
+      "minItems": 1,
       "items": {
         "type": "object",
         "required": [
           "parameter_id",
-          "resource",
           "flow_type",
-          "value_per_person",
+          "value",
           "unit",
-          "period",
+          "basis",
+          "classification",
           "data_status",
           "source",
           "assumptions",
-          "notes"
+          "caveats"
         ],
         "properties": {
-          "parameter_id": { "type": "string" },
-          "resource": { "type": "string" },
-          "flow_type": { "type": "string" },
-          "value_per_person": { "type": ["number", "null"] },
-          "raw_value": { "type": ["string", "null"] },
-          "unit": { "type": "string" },
+          "parameter_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "resource": {
+            "type": "string",
+            "minLength": 1
+          },
+          "system": {
+            "type": "string",
+            "minLength": 1
+          },
+          "equipment_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "flow_type": {
+            "type": "string",
+            "enum": [
+              "consumption",
+              "production",
+              "generation",
+              "removal",
+              "recovery",
+              "loss",
+              "capacity",
+              "requirement"
+            ]
+          },
+          "value": {
+            "type": "number",
+            "minimum": 0
+          },
+          "unit": {
+            "type": "string",
+            "enum": [
+              "kg",
+              "g",
+              "L",
+              "mL",
+              "kcal",
+              "Wh",
+              "kWh",
+              "W",
+              "kW",
+              "kg/day",
+              "kg/cycle",
+              "L/day",
+              "Wh/cycle",
+              "kWh/cycle",
+              "kg/m3",
+              "ppm",
+              "percent"
+            ]
+          },
+          "basis": {
+            "type": "string",
+            "enum": [
+              "per_person",
+              "per_equipment",
+              "per_cycle",
+              "per_time",
+              "total"
+            ]
+          },
           "period": {
             "type": "object",
             "required": ["value", "unit"],
             "properties": {
-              "value": { "type": "number" },
-              "unit": { "type": "string" }
-            }
+              "value": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "unit": {
+                "type": "string",
+                "enum": [
+                  "second",
+                  "minute",
+                  "hour",
+                  "day",
+                  "cycle"
+                ]
+              }
+            },
+            "additionalProperties": false
           },
-          "data_status": { "type": "string" },
-          "source": { "type": ["string", "null"] },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "research_data",
+              "engineering_inference",
+              "gameplay_assumption"
+            ]
+          },
+          "data_status": {
+            "type": "string",
+            "enum": [
+              "mock",
+              "pending_review",
+              "validated",
+              "TBD"
+            ]
+          },
+          "source": {
+            "type": ["object", "null"],
+            "required": ["title"],
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1
+              },
+              "url": {
+                "type": ["string", "null"]
+              },
+              "identifier": {
+                "type": ["string", "null"]
+              },
+              "location": {
+                "type": ["string", "null"]
+              }
+            },
+            "additionalProperties": false
+          },
           "assumptions": {
             "type": "array",
-            "items": { "type": "string" }
+            "items": {
+              "type": "string"
+            }
           },
-          "notes": { "type": "string" }
-        }
+          "caveats": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "basis": {
+                  "const": "per_time"
+                }
+              }
+            },
+            "then": {
+              "required": ["period"],
+              "properties": {
+                "period": {
+                  "properties": {
+                    "unit": {
+                      "enum": [
+                        "hour",
+                        "day",
+                        "cycle"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "additionalProperties": true
       }
     }
   }

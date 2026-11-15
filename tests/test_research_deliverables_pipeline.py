@@ -9,7 +9,9 @@ from src.ingestion.load_research_deliverables import (
 )
 from src.processing.process_research_parameters import (
     transform_research_dataframe_to_parameters,
-    _clean_numeric_value
+    _clean_numeric_value,
+    get_unresolved_parameters_report,
+    get_unsupported_unit_parameters_report
 )
 
 
@@ -41,24 +43,35 @@ def test_transform_research_dataframe_to_parameters():
     df = load_research_parameters()
     params = transform_research_dataframe_to_parameters(df)
     assert isinstance(params, list)
-    assert len(params) == len(df)
+    # 23 parameters have valid numbers and registry units; 22 are unresolved, 21 have unsupported units
+    assert len(params) == 23
 
-    # Check schema compliance of every parameter
+    unresolved = get_unresolved_parameters_report()
+    unsupported = get_unsupported_unit_parameters_report()
+    assert len(unresolved) == 22
+    assert len(unsupported) == 21
+    assert len(params) + len(unresolved) + len(unsupported) == len(df)
+
+    # Check schema compliance of every parameter — TypeScript contract fields
     required_keys = {
         "parameter_id",
         "resource",
         "flow_type",
-        "value_per_person",
+        "value",
+        "basis",
         "unit",
-        "period",
+        "classification",
         "data_status",
         "source",
         "assumptions",
-        "notes"
+        "caveats"
     }
     for p in params:
         assert required_keys.issubset(p.keys())
-        assert isinstance(p["period"], dict)
-        assert "value" in p["period"] and "unit" in p["period"]
+        if p["basis"] == "per_time":
+            assert "period" in p and isinstance(p["period"], dict)
+            assert "value" in p["period"] and "unit" in p["period"]
         assert isinstance(p["assumptions"], list)
+        assert isinstance(p["caveats"], list)
+        assert p["value"] >= 0
 

@@ -8,1302 +8,609 @@
       "parameter_id": "sleeping_o2_consumption",
       "resource": "oxygen",
       "flow_type": "consumption",
-      "value_per_person": 0.37,
-      "raw_value": "0.37",
-      "unit": "g/min/person",
+      "value": 0.37,
+      "unit": "g",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "minute"
-      },
-      "data_status": "research_reference",
-      "source": "NASA 2019 mass-balance study",
-      "assumptions": [],
-      "notes": "Research value: '0.37' | Sleeping O\u2082 consumption"
+      }
     },
     {
       "parameter_id": "nominal_activity_o2_consumption",
       "resource": "oxygen",
       "flow_type": "consumption",
-      "value_per_person": 0.59,
-      "raw_value": "0.59",
-      "unit": "g/min/person",
+      "value": 0.59,
+      "unit": "g",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "minute"
-      },
-      "data_status": "research_reference",
-      "source": "NASA 2019 mass-balance study",
-      "assumptions": [],
-      "notes": "Research value: '0.59' | Nominal-activity O\u2082 consumption"
+      }
     },
     {
       "parameter_id": "aerobic_exercise_o2_consumption",
       "resource": "oxygen",
       "flow_type": "consumption",
-      "value_per_person": 3.99,
-      "raw_value": "up to 3.99",
-      "unit": "g/min/person",
+      "value": 3.99,
+      "unit": "g",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [
+        "Applies only to scheduled exercise windows; MUST NOT be used as an EVA rate"
+      ],
+      "caveats": [
+        "Applies only to scheduled exercise windows. **MUST NOT be used as an EVA O\u2082 rate.**"
+      ],
       "period": {
         "value": 1,
         "unit": "minute"
-      },
-      "data_status": "research_reference",
-      "source": "NASA 2019 mass-balance study (NOT an EVA rate)",
-      "assumptions": [
-        "Applies only to scheduled exercise windows. **MUST NOT be used as an EVA O\u2082 rate.**"
-      ],
-      "notes": "Research value: 'up to 3.99' | Peak O\u2082 used during aerobic exercise | Caveat: Applies only to scheduled exercise windows. **MUST NOT be used as an EVA O\u2082 rate.**"
+      }
     },
     {
       "parameter_id": "daily_o2_requirement_per_astronaut",
       "resource": "oxygen",
-      "flow_type": "consumption",
-      "value_per_person": 0.89,
-      "raw_value": "~0.89",
-      "unit": "kg/person/day",
+      "flow_type": "requirement",
+      "value": 0.89,
+      "unit": "kg",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA reference astronaut model (82 kg astronaut, incl. 90 min exercise)",
-      "assumptions": [],
-      "notes": "Research value: '~0.89' | Daily O\u2082 requirement per astronaut"
+      }
     },
     {
       "parameter_id": "daily_co2_production_per_astronaut",
       "resource": "co2",
       "flow_type": "production",
-      "value_per_person": 1.08,
-      "raw_value": "~1.08",
-      "unit": "kg/person/day",
+      "value": 1.08,
+      "unit": "kg",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA reference astronaut model",
-      "assumptions": [],
-      "notes": "Research value: '~1.08' | Daily CO\u2082 production per astronaut"
+      }
     },
     {
       "parameter_id": "daily_o2_requirement_4_crew",
       "resource": "oxygen",
-      "flow_type": "consumption",
-      "value_per_person": 3.56,
-      "raw_value": "3.56",
+      "flow_type": "requirement",
+      "value": 3.56,
       "unit": "kg/day",
+      "basis": "per_time",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 0.89 \u00d7 4",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "day"
-      },
-      "data_status": "derived",
-      "source": "Derived: 0.89 \u00d7 4",
-      "assumptions": [],
-      "notes": "Research value: '3.56' | Daily O\u2082 requirement (4 crew)"
+      }
     },
     {
       "parameter_id": "daily_co2_production_4_crew",
       "resource": "co2",
       "flow_type": "production",
-      "value_per_person": 4.32,
-      "raw_value": "4.32",
+      "value": 4.32,
       "unit": "kg/day",
+      "basis": "per_time",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 1.08 \u00d7 4",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "day"
-      },
-      "data_status": "derived",
-      "source": "Derived: 1.08 \u00d7 4",
-      "assumptions": [],
-      "notes": "Research value: '4.32' | Daily CO\u2082 production (4 crew)"
+      }
     },
     {
       "parameter_id": "30_day_o2_requirement_4_crew",
       "resource": "oxygen",
-      "flow_type": "consumption",
-      "value_per_person": 106.8,
-      "raw_value": "106.8",
+      "flow_type": "requirement",
+      "value": 106.8,
       "unit": "kg",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "basis": "total",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 3.56 \u00d7 30",
+        "url": null,
+        "identifier": null,
+        "location": null
       },
-      "data_status": "derived",
-      "source": "Derived: 3.56 \u00d7 30",
-      "assumptions": [
+      "assumptions": [],
+      "caveats": [
         "Assumes constant crew and no recovery losses; real mission needs more."
-      ],
-      "notes": "Research value: '106.8' | Total O\u2082 needed for a 30-day mission | Caveat: Assumes constant crew and no recovery losses; real mission needs more."
+      ]
     },
     {
       "parameter_id": "30_day_co2_production_4_crew",
       "resource": "co2",
       "flow_type": "production",
-      "value_per_person": 129.6,
-      "raw_value": "129.6",
+      "value": 129.6,
       "unit": "kg",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "basis": "total",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 4.32 \u00d7 30",
+        "url": null,
+        "identifier": null,
+        "location": null
       },
-      "data_status": "derived",
-      "source": "Derived: 4.32 \u00d7 30",
-      "assumptions": [
+      "assumptions": [],
+      "caveats": [
         "Assumes constant crew and no recovery losses; real mission needs more."
-      ],
-      "notes": "Research value: '129.6' | Total O\u2082 needed for a 30-day mission | Caveat: Assumes constant crew and no recovery losses; real mission needs more."
-    },
-    {
-      "parameter_id": "eva_o2_consumption_rate",
-      "resource": "oxygen",
-      "flow_type": "consumption",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "g/min or kg/hour",
-      "period": {
-        "value": 1,
-        "unit": "minute"
-      },
-      "data_status": "tbd",
-      "source": "Requires EVA-specific source; the 3.99 g/min aerobic value MUST NOT be reused as an EVA rate",
-      "assumptions": [],
-      "notes": "Research value: 'To be defined' | EVA O\u2082 consumption rate"
-    },
-    {
-      "parameter_id": "emergency_o2_reserve_initial_stock",
-      "resource": "oxygen",
-      "flow_type": "storage",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "kg",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Engineering decision: backup O\u2082 available at mission start",
-      "assumptions": [],
-      "notes": "Research value: 'To be defined' | Emergency O\u2082 reserve (initial stock)"
+      ]
     },
     {
       "parameter_id": "daily_water_requirement_per_astronaut",
       "resource": "water",
-      "flow_type": "consumption",
-      "value_per_person": 5.03,
-      "raw_value": "~5.03",
-      "unit": "kg/person/day (\u2248 L/person/day)",
+      "flow_type": "requirement",
+      "value": 5.03,
+      "unit": "kg",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA 2019 mass-balance study; this is a modelled total requirement, not automatically a potable-tank withdrawal",
-      "assumptions": [],
-      "notes": "Research value: '~5.03' | Daily water requirement per astronaut"
+      }
     },
     {
       "parameter_id": "daily_water_requirement_4_crew",
       "resource": "water",
-      "flow_type": "consumption",
-      "value_per_person": 20.12,
-      "raw_value": "20.12",
-      "unit": "kg/day (\u2248 L/day)",
+      "flow_type": "requirement",
+      "value": 20.12,
+      "unit": "kg/day",
+      "basis": "per_time",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 5.03 \u00d7 4; not automatically a potable-tank withdrawal",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "day"
-      },
-      "data_status": "derived",
-      "source": "Derived: 5.03 \u00d7 4; not automatically a potable-tank withdrawal",
-      "assumptions": [],
-      "notes": "Research value: '20.12' | Daily water requirement (4 crew)"
+      }
     },
     {
       "parameter_id": "30_day_water_requirement_4_crew",
       "resource": "water",
-      "flow_type": "consumption",
-      "value_per_person": 603.6,
-      "raw_value": "603.6",
-      "unit": "kg (\u2248 L)",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "flow_type": "requirement",
+      "value": 603.6,
+      "unit": "kg",
+      "basis": "total",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 20.12 \u00d7 30; not a net make-up-water or tank-sizing value",
+        "url": null,
+        "identifier": null,
+        "location": null
       },
-      "data_status": "derived",
-      "source": "Derived: 20.12 \u00d7 30; not a net make-up-water or tank-sizing value",
-      "assumptions": [
+      "assumptions": [],
+      "caveats": [
         "Assumes constant crew and no recovery losses; real mission needs more."
-      ],
-      "notes": "Research value: '603.6' | Total O\u2082 needed for a 30-day mission | Caveat: Assumes constant crew and no recovery losses; real mission needs more."
+      ]
     },
     {
       "parameter_id": "humidity_condensate_recovery",
       "resource": "water",
       "flow_type": "recovery",
-      "value_per_person": 99.0,
-      "raw_value": "~99",
-      "unit": "%",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "value": 99.0,
+      "unit": "percent",
+      "basis": "per_equipment",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA 2019 model (per-stream model figure)",
+        "url": null,
+        "identifier": null,
+        "location": null
       },
-      "data_status": "research_reference",
-      "source": "NASA 2019 model (per-stream model figure)",
-      "assumptions": [
+      "assumptions": [],
+      "caveats": [
         "Per-stream model figure; do not automatically apply this rate to crop transpiration or a lunar habitat."
-      ],
-      "notes": "Research value: '~99' | Recovery of water from crew humidity stream | Caveat: Per-stream model figure; do not automatically apply this rate to crop transpiration or a lunar habitat."
+      ]
     },
     {
       "parameter_id": "urine_water_recovery",
       "resource": "water",
       "flow_type": "recovery",
-      "value_per_person": 85.0,
-      "raw_value": "~85",
-      "unit": "%",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "value": 85.0,
+      "unit": "percent",
+      "basis": "per_equipment",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA 2019 model (per-stream model figure)",
+        "url": null,
+        "identifier": null,
+        "location": null
       },
-      "data_status": "research_reference",
-      "source": "NASA 2019 model (per-stream model figure)",
-      "assumptions": [
+      "assumptions": [],
+      "caveats": [
         "Per-stream model figure."
-      ],
-      "notes": "Research value: '~85' | Recovery of water from urine | Caveat: Per-stream model figure."
+      ]
     },
     {
       "parameter_id": "overall_iss_water_recovery_milestone",
       "resource": "water",
       "flow_type": "recovery",
-      "value_per_person": 98.0,
-      "raw_value": "~98",
-      "unit": "%",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "value": 98.0,
+      "unit": "percent",
+      "basis": "total",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA Achieves Water Recovery Milestone on International Space Station",
+        "url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+        "identifier": "NASA ISS ECLSS Milestone 2023",
+        "location": "Brine Processor Assembly (BPA) Telemetry Report"
       },
-      "data_status": "research_reference",
-      "source": "NASA 2023 ISS milestone (system-level achievement, not per-stream)",
-      "assumptions": [
+      "assumptions": [],
+      "caveats": [
         "System-level milestone, NOT a guaranteed per-subsystem rate. Do not use as the gameplay default for every stream."
-      ],
-      "notes": "Research value: '~98' | Whole-system recovery achieved on the ISS | Caveat: System-level milestone, NOT a guaranteed per-subsystem rate. Do not use as the gameplay default for every stream."
+      ]
     },
     {
       "parameter_id": "iss_water_recovery_rate_before_brine_processor_assembly_bpa",
       "resource": "water",
       "flow_type": "recovery",
-      "value_per_person": 93.5,
-      "raw_value": "~93\u201394",
-      "unit": "%",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "value": 93.5,
+      "unit": "percent",
+      "basis": "per_equipment",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA Achieves Water Recovery Milestone on International Space Station",
+        "url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+        "identifier": "NASA ISS ECLSS Milestone 2023",
+        "location": "Brine Processor Assembly (BPA) Telemetry Report"
       },
-      "data_status": "research_reference",
-      "source": "NASA 2023 ISS milestone article: \"before the implementation of the Brine Processor Assembly (BPA), the total water recovery was between 93\u201394 %\"",
       "assumptions": [],
-      "notes": "Research value: '~93\u201394' | ISS water-recovery rate before Brine Processor Assembly (BPA)"
-    },
-    {
-      "parameter_id": "gameplay_water_recovery_rate",
-      "resource": "water",
-      "flow_type": "recovery",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "%",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Team modelling decision; do NOT default to 98 % as a guaranteed per-subsystem rate",
-      "assumptions": [
-        "Team must decide: single overall rate, or per-stream. If single, justify the chosen number."
-      ],
-      "notes": "Research value: 'To be defined' | The single % the simulation uses | Caveat: Team must decide: single overall rate, or per-stream. If single, justify the chosen number."
+      "caveats": []
     },
     {
       "parameter_id": "failed_brine_processor_fallback_rate_inferred",
       "resource": "general",
-      "flow_type": "specification",
-      "value_per_person": 93.5,
-      "raw_value": "~93\u201394",
-      "unit": "%",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "flow_type": "recovery",
+      "value": 93.5,
+      "unit": "percent",
+      "basis": "per_equipment",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA Achieves Water Recovery Milestone on International Space Station",
+        "url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+        "identifier": "NASA ISS ECLSS Milestone 2023",
+        "location": "Brine Processor Assembly (BPA) Telemetry Report"
       },
-      "data_status": "engineering_inference",
-      "source": "NASA documents 93\u201394 % as the historical ISS water-recovery rate before BPA was added (NASA 2023). Treating this as the post-BPA-failure fallback rate is an engineering inference, not a direct NASA statement.",
-      "assumptions": [
-        "NASA documented 93\u201394 % as the ISS recovery rate before BPA was added (NASA 2023). Using this as the post-BPA-failure rate is an engineering inference"
-      ],
-      "notes": "Research value: '~93\u201394' | Recovery rate if BPA fails | Caveat: NASA documented 93\u201394 % as the ISS recovery rate before BPA was added (NASA 2023). Using this as the post-BPA-failure rate is an engineering inference, not a direct NASA statement. Other"
-    },
-    {
-      "parameter_id": "initial_stored_water_mission_start",
-      "resource": "water",
-      "flow_type": "storage",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "kg / L",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Engineering decision",
       "assumptions": [],
-      "notes": "Research value: 'To be defined' | Initial stored water (mission start)"
-    },
-    {
-      "parameter_id": "change_4_absorbed_dose_rate_in_silicon",
-      "resource": "radiation",
-      "flow_type": "environment",
-      "value_per_person": 13.2,
-      "raw_value": "13.2 \u00b1 1",
-      "unit": "\u03bcGy/hour",
-      "period": {
-        "value": 1,
-        "unit": "hour"
-      },
-      "data_status": "research_reference",
-      "source": "Science Advances 2020 (measured in silicon \u2014 NOT a human-tissue dose)",
-      "assumptions": [
-        "Silicon measurement, not human tissue. **MUST NOT be converted to a human dose by changing the unit.**"
-      ],
-      "notes": "Research value: '13.2 \u00b1 1' | Energy absorbed in SILICON on the lunar surface | Caveat: Silicon measurement, not human tissue. **MUST NOT be converted to a human dose by changing the unit.**"
-    },
-    {
-      "parameter_id": "change_4_derived_gcr_dose_equivalent_rate",
-      "resource": "radiation",
-      "flow_type": "environment",
-      "value_per_person": 57.1,
-      "raw_value": "57.1 \u00b1 10.6",
-      "unit": "\u03bcSv/hour",
-      "period": {
-        "value": 1,
-        "unit": "hour"
-      },
-      "data_status": "research_reference",
-      "source": "Science Advances 2020 (derived value, not a universal effective dose)",
-      "assumptions": [
-        "Silicon measurement, not human tissue. **MUST NOT be converted to a human dose by changing the unit.**"
-      ],
-      "notes": "Research value: '57.1 \u00b1 10.6' | Energy absorbed in SILICON on the lunar surface | Caveat: Silicon measurement, not human tissue. **MUST NOT be converted to a human dose by changing the unit.**"
-    },
-    {
-      "parameter_id": "human_effective_dose_on_the_lunar_surface",
-      "resource": "radiation",
-      "flow_type": "environment",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "mSv/day",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Requires a dose model accounting for radiation type and biological effect; the 1.369 mSv/day figure MUST NOT be reused",
-      "assumptions": [],
-      "notes": "Research value: 'To be defined' | Human effective dose on the lunar surface"
-    },
-    {
-      "parameter_id": "spe_solar_storm_warning_time",
-      "resource": "radiation",
-      "flow_type": "specification",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "minutes",
-      "period": {
-        "value": 1,
-        "unit": "minute"
-      },
-      "data_status": "tbd",
-      "source": "No universal 15\u2013120 min value is supported by the listed sources",
-      "assumptions": [],
-      "notes": "Research value: 'To be defined' | SPE / solar-storm warning time"
-    },
-    {
-      "parameter_id": "shielding_thickness_requirement",
-      "resource": "radiation",
-      "flow_type": "consumption",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "g/cm\u00b2",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Mission-specific; no universal 20 g/cm\u00b2 value is supported",
-      "assumptions": [
-        "Mission-specific; depends on material, density, duration. No universal 20 g/cm\u00b2 value."
-      ],
-      "notes": "Research value: 'To be defined' | Regolith or material thickness needed | Caveat: Mission-specific; depends on material, density, duration. No universal 20 g/cm\u00b2 value."
-    },
-    {
-      "parameter_id": "shelter_protection_factor",
-      "resource": "radiation",
-      "flow_type": "specification",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "ratio or % reduction",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Engineering decision: how much a shelter reduces exposure during an SPE",
-      "assumptions": [
-        "Dev team must decide and label as a gameplay assumption."
-      ],
-      "notes": "Research value: 'To be defined' | How much the shelter cuts exposure | Caveat: Dev team must decide and label as a gameplay assumption."
+      "caveats": [
+        "NASA documented 93\u201394 % as the ISS recovery rate before BPA was added (NASA 2023). Using this as the post-BPA-failure rate is an engineering inference, not a direct NASA statement. Other component failures require a modelling decision."
+      ]
     },
     {
       "parameter_id": "fission_surface_power_target",
       "resource": "power",
-      "flow_type": "specification",
-      "value_per_person": 40.0,
-      "raw_value": "\u2265 40",
-      "unit": "kW (continuous)",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "flow_type": "generation",
+      "value": 40.0,
+      "unit": "kW",
+      "basis": "per_equipment",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA Fission Surface Power Project",
+        "url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/",
+        "identifier": "NASA STMD Technology Goal",
+        "location": "40 kW Continuous Power Target"
       },
-      "data_status": "research_reference",
-      "source": "NASA development target \u2014 **proposed/future technology, NOT deployed; out of scope for the initial mission (v1)**",
       "assumptions": [],
-      "notes": "Research value: '\u2265 40' | Fission surface-power target"
-    },
-    {
-      "parameter_id": "fission_operating_design_goal",
-      "resource": "power",
-      "flow_type": "specification",
-      "value_per_person": 10.0,
-      "raw_value": "~10",
-      "unit": "years",
-      "period": {
-        "value": 1,
-        "unit": "year"
-      },
-      "data_status": "research_reference",
-      "source": "NASA development target \u2014 proposed, not operating",
-      "assumptions": [],
-      "notes": "Research value: '~10' | Fission operating design goal"
+      "caveats": []
     },
     {
       "parameter_id": "fission_daily_energy_mathematical_example",
       "resource": "power",
-      "flow_type": "consumption",
-      "value_per_person": 960.0,
-      "raw_value": "960",
-      "unit": "kWh/day",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "derived",
-      "source": "Derived example: 40 kW \u00d7 24 h \u2014 illustrative; **assumes fission is deployed, which it is not in v1**",
-      "assumptions": [],
-      "notes": "Research value: '960' | Fission daily energy (mathematical example)"
-    },
-    {
-      "parameter_id": "v1_power_model",
-      "resource": "power",
-      "flow_type": "infrastructure",
-      "value_per_person": null,
-      "raw_value": "Solar + battery only",
-      "unit": "qualitative",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "**v1 habitat runs on solar panels + battery storage only. Fission is a future-technology unlock beyond v1.** The simulation MUST NOT imply that battery or backup sources can support the lunar night until habitat demand (TBD), usable battery capacity (TBD), battery efficiency (TBD), and solar generation (TBD) are all specified.",
-      "assumptions": [],
-      "notes": "Research value: 'Solar + battery only' | **v1 power model**"
-    },
-    {
-      "parameter_id": "solar_power_generation_capacity",
-      "resource": "power",
-      "flow_type": "production",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "kW",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Location-specific (equator vs South Pole); requires panel-area and efficiency assumptions",
-      "assumptions": [],
-      "notes": "Research value: 'To be defined' | Solar-power generation capacity"
-    },
-    {
-      "parameter_id": "battery_storage_capacity",
-      "resource": "power",
-      "flow_type": "storage",
-      "value_per_person": null,
-      "raw_value": "To be defined",
+      "flow_type": "generation",
+      "value": 960.0,
       "unit": "kWh",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "basis": "per_time",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA Fission Surface Power Project",
+        "url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/",
+        "identifier": "NASA STMD Technology Goal",
+        "location": "40 kW Continuous Power Target"
       },
-      "data_status": "tbd",
-      "source": "Engineering decision: depends on habitat demand and dark-period length",
-      "assumptions": [
-        "Depends on demand and dark-period length. Dev team must decide and label as a gameplay assumption."
-      ],
-      "notes": "Research value: 'To be defined' | Energy the habitat can store | Caveat: Depends on demand and dark-period length. Dev team must decide and label as a gameplay assumption."
-    },
-    {
-      "parameter_id": "habitat_average_power_demand",
-      "resource": "power",
-      "flow_type": "consumption",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "kW",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Requires summing the demand of all modelled subsystems",
-      "assumptions": [
-        "Required before any battery-sizing calculation is meaningful."
-      ],
-      "notes": "Research value: 'To be defined' | Sum of all subsystem power draws | Caveat: Required before any battery-sizing calculation is meaningful."
-    },
-    {
-      "parameter_id": "lunar_daytime_length_near_equator",
-      "resource": "power",
-      "flow_type": "environment",
-      "value_per_person": 14.0,
-      "raw_value": "~14",
-      "unit": "Earth days",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA Moon Fact Sheet (NSSDCA) \u2014 synodic day 29.53 d \u21d2 ~14.75 d daylight",
       "assumptions": [],
-      "notes": "Research value: '~14' | Lunar daytime length (near equator)"
-    },
-    {
-      "parameter_id": "lunar_nighttime_length_near_equator",
-      "resource": "power",
-      "flow_type": "environment",
-      "value_per_person": 14.0,
-      "raw_value": "~14",
-      "unit": "Earth days",
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA Moon Fact Sheet (NSSDCA) \u2014 synodic day 29.53 d \u21d2 ~14.75 d darkness",
-      "assumptions": [],
-      "notes": "Research value: '~14' | Lunar nighttime length (near equator)"
-    },
-    {
-      "parameter_id": "lunar_south_pole_lighting",
-      "resource": "power",
-      "flow_type": "environment",
-      "value_per_person": null,
-      "raw_value": "Variable (some areas near-continuous sunlight; nearby terrain in shadow)",
-      "unit": "qualitative",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "NASA lunar South Pole reference",
-      "assumptions": [],
-      "notes": "Research value: 'Variable (some areas near-continuous sunlight; nearby terrain in shadow)' | Lunar South Pole lighting"
-    },
-    {
-      "parameter_id": "power_priority_tiers_critical_important_reducible",
-      "resource": "power",
-      "flow_type": "specification",
-      "value_per_person": null,
-      "raw_value": "3-tier scheme",
-      "unit": "qualitative",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Proposed in research paper \u00a75.5 \u2014 a gameplay scheme, NOT a NASA operating procedure",
-      "assumptions": [
-        "A gameplay scheme proposed in the research paper, NOT a NASA operating procedure. Label as such."
-      ],
-      "notes": "Research value: '3-tier scheme' | Critical / Important / Reducible classification of loads | Caveat: A gameplay scheme proposed in the research paper, NOT a NASA operating procedure. Label as such."
-    },
-    {
-      "parameter_id": "crew_size",
-      "resource": "crew",
-      "flow_type": "specification",
-      "value_per_person": 4.0,
-      "raw_value": "4",
-      "unit": "astronauts",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "gameplay_assumption",
-      "source": "Mission spec (fixed by the simulation brief)",
-      "assumptions": [
-        "Design and gameplay assumption agreed by development team",
-        "Fixed by the simulation brief."
-      ],
-      "notes": "Research value: '4' | Number of astronauts in the habitat | Caveat: Fixed by the simulation brief."
-    },
-    {
-      "parameter_id": "mission_duration_reference",
-      "resource": "crew",
-      "flow_type": "specification",
-      "value_per_person": 30.0,
-      "raw_value": "30",
-      "unit": "days",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "Reference used for 30-day calculations; final duration to be set by team",
-      "assumptions": [],
-      "notes": "Research value: '30' | Mission duration (reference)"
-    },
-    {
-      "parameter_id": "initial_stored_oxygen_mission_start",
-      "resource": "oxygen",
-      "flow_type": "storage",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "kg",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Engineering decision",
-      "assumptions": [],
-      "notes": "Research value: 'To be defined' | Initial stored oxygen (mission start)"
-    },
-    {
-      "parameter_id": "activity_schedule_sleep_nominal_exercise_minutes_per_astronaut_per_day",
-      "resource": "general",
-      "flow_type": "specification",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "minutes/day",
-      "period": {
-        "value": 1,
-        "unit": "minute"
-      },
-      "data_status": "tbd",
-      "source": "Required only if the team chooses activity-based O\u2082 calculation",
-      "assumptions": [],
-      "notes": "Research value: 'To be defined' | Activity schedule (sleep / nominal / exercise minutes per astronaut per day)"
+      }
     },
     {
       "parameter_id": "packaged_food_per_astronaut",
       "resource": "food",
-      "flow_type": "specification",
-      "value_per_person": 2.39,
-      "raw_value": "2.39",
-      "unit": "kg/person/day",
+      "flow_type": "consumption",
+      "value": 2.39,
+      "unit": "kg",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "Ewert 2019 (NASA, NTRS 20190027563) citing NASA Life Support Baseline Values and Assumptions Document (BVAD), Table 4-53 \u2014 the table is in the BVAD, which Ewert discusses; it is not a table within the Ewert paper itself",
-      "assumptions": [],
-      "notes": "Research value: '2.39' | Packaged food per astronaut"
+      }
     },
     {
       "parameter_id": "packaged_food_4_crew",
       "resource": "food",
-      "flow_type": "specification",
-      "value_per_person": 9.56,
-      "raw_value": "9.56",
+      "flow_type": "consumption",
+      "value": 9.56,
       "unit": "kg/day",
+      "basis": "per_time",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 2.39 \u00d7 4",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "day"
-      },
-      "data_status": "derived",
-      "source": "Derived: 2.39 \u00d7 4",
-      "assumptions": [],
-      "notes": "Research value: '9.56' | Packaged food (4 crew)"
+      }
     },
     {
       "parameter_id": "30_day_packaged_food_4_crew",
       "resource": "food",
-      "flow_type": "specification",
-      "value_per_person": 286.8,
-      "raw_value": "286.8",
+      "flow_type": "consumption",
+      "value": 286.8,
       "unit": "kg",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "basis": "total",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 9.56 \u00d7 30",
+        "url": null,
+        "identifier": null,
+        "location": null
       },
-      "data_status": "derived",
-      "source": "Derived: 9.56 \u00d7 30",
-      "assumptions": [
+      "assumptions": [],
+      "caveats": [
         "Assumes constant crew and no recovery losses; real mission needs more."
-      ],
-      "notes": "Research value: '286.8' | Total O\u2082 needed for a 30-day mission | Caveat: Assumes constant crew and no recovery losses; real mission needs more."
+      ]
     },
     {
       "parameter_id": "energy_requirement_per_astronaut",
       "resource": "food",
-      "flow_type": "consumption",
-      "value_per_person": 3000.0,
-      "raw_value": "~2,500\u20133,500",
-      "unit": "kcal/person/day",
-      "period": {
-        "value": 1,
-        "unit": "day"
+      "flow_type": "requirement",
+      "value": 3000.0,
+      "unit": "kcal",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA STEMonstration: Nutrition & ISS Food Systems",
+        "url": "https://www.nasa.gov/stem-content/stemonstrations-nutrition",
+        "identifier": "NASA STEM Education / Science Friday 2022",
+        "location": "Astronaut Caloric Requirements Guidelines"
       },
-      "data_status": "research_reference",
-      "source": "NASA STEMonstration: Nutrition (2018); Science Friday interview with NASA ISS food systems manager (2022)",
       "assumptions": [],
-      "notes": "Research value: '~2,500\u20133,500' | Energy requirement per astronaut"
-    },
-    {
-      "parameter_id": "stored_food_shelf_life_vitamin_b1",
-      "resource": "food",
-      "flow_type": "storage",
-      "value_per_person": 1.0,
-      "raw_value": "~1 year before inadequate",
-      "unit": "years",
-      "period": {
-        "value": 1,
-        "unit": "year"
-      },
-      "data_status": "research_reference",
-      "source": "Cooper et al. 2017 (NPJ Microgravity, PMC5466603)",
-      "assumptions": [],
-      "notes": "Research value: '~1 year before inadequate' | Stored-food shelf life (vitamin B1)"
-    },
-    {
-      "parameter_id": "stored_food_shelf_life_vitamin_c",
-      "resource": "food",
-      "flow_type": "storage",
-      "value_per_person": 3.0,
-      "raw_value": "~3 years before inadequate",
-      "unit": "years",
-      "period": {
-        "value": 1,
-        "unit": "year"
-      },
-      "data_status": "research_reference",
-      "source": "Cooper et al. 2017 (NPJ Microgravity, PMC5466603)",
-      "assumptions": [],
-      "notes": "Research value: '~3 years before inadequate' | Stored-food shelf life (vitamin C)"
-    },
-    {
-      "parameter_id": "stored_food_target_for_beyond_leo",
-      "resource": "food",
-      "flow_type": "storage",
-      "value_per_person": 5.0,
-      "raw_value": "up to 5",
-      "unit": "years",
-      "period": {
-        "value": 1,
-        "unit": "year"
-      },
-      "data_status": "research_reference",
-      "source": "Cooper et al. 2017 (NPJ Microgravity, PMC5466603)",
-      "assumptions": [],
-      "notes": "Research value: 'up to 5' | Stored-food target for beyond-LEO"
-    },
-    {
-      "parameter_id": "crop_growth_time_microgreens",
-      "resource": "food",
-      "flow_type": "infrastructure",
-      "value_per_person": 10.5,
-      "raw_value": "7\u201314",
-      "unit": "days",
+      "caveats": [],
       "period": {
         "value": 1,
         "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "Horticulture reference (typical cycle); NASA is researching microgreens as a candidate crop",
-      "assumptions": [],
-      "notes": "Research value: '7\u201314' | Crop growth time \u2014 microgreens"
-    },
-    {
-      "parameter_id": "crop_growth_time_lettuce",
-      "resource": "food",
-      "flow_type": "infrastructure",
-      "value_per_person": 30.5,
-      "raw_value": "28\u201333",
-      "unit": "days",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "Wheeler 1996 (NASA BPC); NASA OSDR OSD-269 (VEG-03A)",
-      "assumptions": [],
-      "notes": "Research value: '28\u201333' | Crop growth time \u2014 lettuce"
-    },
-    {
-      "parameter_id": "crop_growth_time_dwarf_wheat",
-      "resource": "food",
-      "flow_type": "infrastructure",
-      "value_per_person": 60.5,
-      "raw_value": "~35\u201386",
-      "unit": "days",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA Growing Plants in Space (5 wk ISS); Wheeler 1996 (NASA BPC, 64\u201386 d)",
-      "assumptions": [],
-      "notes": "Research value: '~35\u201386' | Crop growth time \u2014 dwarf wheat"
-    },
-    {
-      "parameter_id": "crop_growth_time_soybean",
-      "resource": "food",
-      "flow_type": "infrastructure",
-      "value_per_person": 93.5,
-      "raw_value": "90\u201397",
-      "unit": "days",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "Wheeler 1996 (NASA BPC)",
-      "assumptions": [],
-      "notes": "Research value: '90\u201397' | Crop growth time \u2014 soybean"
-    },
-    {
-      "parameter_id": "plant_area_for_food_vegetarian",
-      "resource": "food",
-      "flow_type": "infrastructure",
-      "value_per_person": 45.0,
-      "raw_value": "40\u201350",
-      "unit": "m\u00b2/person",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "Wheeler (NASA) bioregenerative life-support research",
-      "assumptions": [],
-      "notes": "Research value: '40\u201350' | Plant area for food (vegetarian)"
-    },
-    {
-      "parameter_id": "plant_area_for_o2co2_removal",
-      "resource": "co2",
-      "flow_type": "infrastructure",
-      "value_per_person": 22.5,
-      "raw_value": "20\u201325",
-      "unit": "m\u00b2/person",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "Wheeler (NASA) bioregenerative life-support research",
-      "assumptions": [],
-      "notes": "Research value: '20\u201325' | Plant area for O\u2082/CO\u2082 removal"
-    },
-    {
-      "parameter_id": "plant_area_for_food_4_crew",
-      "resource": "food",
-      "flow_type": "infrastructure",
-      "value_per_person": 180.0,
-      "raw_value": "160\u2013200",
-      "unit": "m\u00b2",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "derived",
-      "source": "Derived: 40\u201350 \u00d7 4",
-      "assumptions": [],
-      "notes": "Research value: '160\u2013200' | Plant area for food (4 crew)"
-    },
-    {
-      "parameter_id": "veggie_iss_chamber_power",
-      "resource": "power",
-      "flow_type": "specification",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "W",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "The cited NASA Veggie page (2014) does not state a wattage; the ~70 W figure reported elsewhere (ISS National Lab / Sierra Space facility pages) requires a direct URL to be properly cited",
-      "assumptions": [],
-      "notes": "Research value: 'To be defined' | Veggie ISS chamber power"
-    },
-    {
-      "parameter_id": "fertilizer_required_no_recycling",
-      "resource": "food",
-      "flow_type": "specification",
-      "value_per_person": 90.0,
-      "raw_value": "up to 90",
-      "unit": "kg/person/year",
-      "period": {
-        "value": 1,
-        "unit": "year"
-      },
-      "data_status": "research_reference",
-      "source": "Wheeler 2020 (NASA, NTRS 20200002230)",
-      "assumptions": [],
-      "notes": "Research value: 'up to 90' | Fertilizer required (no recycling)"
-    },
-    {
-      "parameter_id": "stored_food_vs_grown_food_ratio",
-      "resource": "food",
-      "flow_type": "storage",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "ratio",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Team decision; `food-system-research.md` \u00a74.5 gives recommended ranges by mission length",
-      "assumptions": [],
-      "notes": "Research value: 'To be defined' | Stored-food vs grown-food ratio"
-    },
-    {
-      "parameter_id": "crop_water_use_lettuce",
-      "resource": "water",
-      "flow_type": "specification",
-      "value_per_person": 2.0,
-      "raw_value": "~2",
-      "unit": "L/m\u00b2/d",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "Wheeler 2020 (NASA TM-2020-5008832, Table 2) \u2014 BPC measured",
-      "assumptions": [],
-      "notes": "Research value: '~2' | Crop water use \u2014 lettuce"
-    },
-    {
-      "parameter_id": "crop_water_use_wheat",
-      "resource": "water",
-      "flow_type": "specification",
-      "value_per_person": 5.0,
-      "raw_value": "~5",
-      "unit": "L/m\u00b2/d",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "Wheeler 2020 (NASA TM-2020-5008832, Table 2) \u2014 BPC measured",
-      "assumptions": [],
-      "notes": "Research value: '~5' | Crop water use \u2014 wheat"
-    },
-    {
-      "parameter_id": "crop_water_use_soybean",
-      "resource": "water",
-      "flow_type": "specification",
-      "value_per_person": 5.0,
-      "raw_value": "~5",
-      "unit": "L/m\u00b2/d",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "Wheeler 2020 (NASA TM-2020-5008832, Table 2) \u2014 BPC measured",
-      "assumptions": [],
-      "notes": "Research value: '~5' | Crop water use \u2014 soybean"
-    },
-    {
-      "parameter_id": "crop_water_use_potato",
-      "resource": "water",
-      "flow_type": "specification",
-      "value_per_person": null,
-      "raw_value": "TBD \u2014 value reported in Wheeler 2020 p. 9 Table 2 but not extracted; no estimate assumed",
-      "unit": "L/m\u00b2/d",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Wheeler 2020, p. 9, Table 2",
-      "assumptions": [],
-      "notes": "Research value: 'TBD \u2014 value reported in Wheeler 2020 p. 9 Table 2 but not extracted; no estimate assumed' | Crop water use \u2014 potato"
-    },
-    {
-      "parameter_id": "crop_water_demand_formula",
-      "resource": "water",
-      "flow_type": "consumption",
-      "value_per_person": null,
-      "raw_value": "rate \u00d7 area \u00d7 1 kg/L",
-      "unit": "kg/day",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Derived from Wheeler 2020 L/m\u00b2/d values",
-      "assumptions": [
-        "Use Wheeler 2020 rates \u00d7 chosen crop area. Feeds into water balance (Part C)."
-      ],
-      "notes": "Research value: 'rate \u00d7 area \u00d7 1 kg/L' | Total daily crop water = rate \u00d7 area \u00d7 1 kg/L | Caveat: Use Wheeler 2020 rates \u00d7 chosen crop area. Feeds into water balance (Part C)."
-    },
-    {
-      "parameter_id": "crop_electricity_requirement_full_scale",
-      "resource": "food",
-      "flow_type": "consumption",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "kW",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Illustrative estimate 18\u201336 kW for a 180 m\u00b2 setup (`food-system-research.md` \u00a75.4); final value depends on crop mix and PPFD choice \u2014 NOT a NASA lunar-system spec",
-      "assumptions": [],
-      "notes": "Research value: 'To be defined' | Crop electricity requirement (full-scale)"
-    },
-    {
-      "parameter_id": "initial_stored_food_mission_start",
-      "resource": "food",
-      "flow_type": "storage",
-      "value_per_person": null,
-      "raw_value": "To be defined",
-      "unit": "kg",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "tbd",
-      "source": "Engineering decision",
-      "assumptions": [],
-      "notes": "Research value: 'To be defined' | Initial stored food (mission start)"
-    },
-    {
-      "parameter_id": "lunar_surface_gcr_dose_equivalent",
-      "resource": "radiation",
-      "flow_type": "environment",
-      "value_per_person": 1.37,
-      "raw_value": "1.37",
-      "unit": "mSv/day",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA OSDR RadLab & Science Advances 2020 (DOI: 10.1126/sciadv.aaz2574)",
-      "assumptions": [
-        "Surface detector telemetry; biological tissue dose requires model weighting"
-      ],
-      "notes": "Chang'e-4 derived GCR dose-equivalent rate on lunar surface"
-    },
-    {
-      "parameter_id": "spe_solar_particle_warning_time",
-      "resource": "radiation",
-      "flow_type": "environment",
-      "value_per_person": 286.0,
-      "raw_value": "286.0",
-      "unit": "minute",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA CCMC DONKI (api.nasa.gov/DONKI)",
-      "assumptions": [
-        "Lead time from flare observation to energetic proton arrival at near-Earth/Moon"
-      ],
-      "notes": "DONKI historical SPE warning lead time (Associated flare: X2.2)"
-    },
-    {
-      "parameter_id": "spe_peak_proton_flux",
-      "resource": "radiation",
-      "flow_type": "environment",
-      "value_per_person": 1000.0,
-      "raw_value": "1000.0",
-      "unit": "pfu",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA CCMC DONKI",
-      "assumptions": [
-        ">10 MeV solar proton flux exceeding threshold"
-      ],
-      "notes": "Historical solar proton event flux (S3 scale)"
-    },
-    {
-      "parameter_id": "crop_growth_time_lettuce_veg03a",
-      "resource": "food",
-      "flow_type": "infrastructure",
-      "value_per_person": 33.0,
-      "raw_value": "33",
-      "unit": "day",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA OSDR OSD-269 & Wheeler 2020 (TM-2020-5008832)",
-      "assumptions": [
-        "Gross BPC water-use; transpiration is recycled via humidity recovery"
-      ],
-      "notes": "Lettuce (VEG-03A) first harvest cycle (cut-and-come-again (3 weekly harvests))"
-    },
-    {
-      "parameter_id": "flight_crop_growth_time_dwarf_wheat",
-      "resource": "food",
-      "flow_type": "infrastructure",
-      "value_per_person": 35.0,
-      "raw_value": "35",
-      "unit": "day",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA BPC (Wheeler 1996) & Wheeler 2020 Table 2",
-      "assumptions": [
-        "High lighting power requirement; requires closed-loop humidity capture"
-      ],
-      "notes": "Dwarf Wheat first harvest cycle (single harvest (~35d dwarf, 64-86d full))"
-    },
-    {
-      "parameter_id": "flight_crop_growth_time_soybean",
-      "resource": "food",
-      "flow_type": "infrastructure",
-      "value_per_person": 90.0,
-      "raw_value": "90",
-      "unit": "day",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA BPC (Wheeler 1996) & Wheeler 2020 Table 2",
-      "assumptions": [
-        "Long growth cycle; sensitive to lighting failure"
-      ],
-      "notes": "Soybean first harvest cycle (single harvest (90-97 days))"
-    },
-    {
-      "parameter_id": "flight_crop_growth_time_microgreens",
-      "resource": "food",
-      "flow_type": "infrastructure",
-      "value_per_person": 10.0,
-      "raw_value": "10",
-      "unit": "day",
-      "period": {
-        "value": 1,
-        "unit": "day"
-      },
-      "data_status": "research_reference",
-      "source": "NASA Horticultural candidate & Wheeler research",
-      "assumptions": [
-        "Low calorie yield; acts strictly as fresh supplement"
-      ],
-      "notes": "Microgreens / Sprouts first harvest cycle (rapid rotation (7-14 days))"
+      }
     },
     {
       "parameter_id": "crew_oxygen_consumption",
       "resource": "oxygen",
       "flow_type": "consumption",
-      "value_per_person": 0.89,
-      "raw_value": "~0.89",
-      "unit": "kg/person/day",
+      "value": 0.89,
+      "unit": "kg",
+      "basis": "per_person",
       "period": {
         "value": 1,
         "unit": "day"
       },
-      "data_status": "research_reference",
-      "source": "NASA reference astronaut model (82 kg astronaut, incl. 90 min exercise)",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "82 kg reference astronaut model incl. 90 min exercise"
+      },
       "assumptions": [],
-      "notes": "Core alias for daily_o2_requirement_per_astronaut from simulation-parameter-sheet.md \u00a73.1"
+      "caveats": [
+        "Canonical alias for daily_o2_requirement_per_astronaut (simulation-parameter-sheet.md \u00a73.1)"
+      ]
     },
     {
       "parameter_id": "crew_co2_production",
       "resource": "co2",
       "flow_type": "production",
-      "value_per_person": 1.08,
-      "raw_value": "~1.08",
-      "unit": "kg/person/day",
+      "value": 1.08,
+      "unit": "kg",
+      "basis": "per_person",
       "period": {
         "value": 1,
         "unit": "day"
       },
-      "data_status": "research_reference",
-      "source": "NASA reference astronaut model",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "82 kg reference astronaut CO\u2082 production rate"
+      },
       "assumptions": [],
-      "notes": "Core alias for daily_co2_production_per_astronaut from simulation-parameter-sheet.md \u00a73.1"
+      "caveats": [
+        "Canonical alias for daily_co2_production_per_astronaut (simulation-parameter-sheet.md \u00a73.1)"
+      ]
     },
     {
       "parameter_id": "crew_water_requirement",
       "resource": "water",
-      "flow_type": "consumption",
-      "value_per_person": 5.03,
-      "raw_value": "~5.03",
-      "unit": "kg/person/day (\u2248 L/person/day)",
+      "flow_type": "requirement",
+      "value": 5.03,
+      "unit": "kg",
+      "basis": "per_person",
       "period": {
         "value": 1,
         "unit": "day"
       },
-      "data_status": "research_reference",
-      "source": "NASA 2019 mass-balance study",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563",
+        "location": "Total daily water requirement per astronaut (drinking + food preparation + hygiene)"
+      },
       "assumptions": [],
-      "notes": "Core alias for daily_water_requirement_per_astronaut from simulation-parameter-sheet.md \u00a73.2"
+      "caveats": [
+        "Canonical alias for daily_water_requirement_per_astronaut (simulation-parameter-sheet.md \u00a73.2)",
+        "Value includes potable water, food rehydration, and hygiene water"
+      ]
     },
     {
       "parameter_id": "crew_food_energy",
       "resource": "food",
       "flow_type": "consumption",
-      "value_per_person": 3000.0,
-      "raw_value": "~2,500\u20133,500",
-      "unit": "kcal/person/day",
+      "value": 3000.0,
+      "unit": "kcal",
+      "basis": "per_person",
       "period": {
         "value": 1,
         "unit": "day"
       },
-      "data_status": "research_reference",
-      "source": "NASA STEMonstration: Nutrition (2018); Science Friday (2022)",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA STEMonstration: Nutrition & ISS Food Systems",
+        "url": "https://www.nasa.gov/stem-content/stemonstrations-nutrition",
+        "identifier": "NASA STEM Education / Science Friday 2022",
+        "location": "Astronaut Caloric Requirements Guidelines"
+      },
       "assumptions": [],
-      "notes": "Core alias for energy_requirement_per_astronaut from simulation-parameter-sheet.md \u00a73.6"
+      "caveats": [
+        "Canonical alias for energy_requirement_per_astronaut (simulation-parameter-sheet.md \u00a73.6)",
+        "Mid-point of 2,500\u20133,500 kcal/day range; actual requirement varies with activity level"
+      ]
     },
     {
       "parameter_id": "crew_food_mass",
       "resource": "food",
       "flow_type": "consumption",
-      "value_per_person": 2.39,
-      "raw_value": "2.39",
-      "unit": "kg/person/day",
+      "value": 2.39,
+      "unit": "kg",
+      "basis": "per_person",
       "period": {
         "value": 1,
         "unit": "day"
       },
-      "data_status": "research_reference",
-      "source": "Ewert 2019 (NASA, NTRS 20190027563) citing NASA BVAD Table 4-53",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Packaged food mass per astronaut per day"
+      },
       "assumptions": [],
-      "notes": "Core alias for packaged_food_per_astronaut from simulation-parameter-sheet.md \u00a73.6"
+      "caveats": [
+        "Canonical alias for packaged_food_per_astronaut (simulation-parameter-sheet.md \u00a73.6)"
+      ]
     }
   ]
 }

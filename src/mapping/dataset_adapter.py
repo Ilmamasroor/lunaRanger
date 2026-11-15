@@ -1,12 +1,22 @@
-"""Dataset Adapter mapping research deliverables and NASA API datasets to Schema 1.1.
+"""Dataset Adapter mapping research deliverables and NASA API datasets to the TypeScript
+SimulationParameter contract (Schema 1.1).
 
-Produces the exact format required by the simulation engine:
+Every parameter produced here conforms to the shared TypeScript interface:
 {
-  "schema_version": "1.1",
-  "mission": {
-    "crew_size": 4
-  },
-  "parameters": [...]
+  "parameter_id": str,
+  "resource": str (optional for non-resource flows),
+  "system": str (optional),
+  "equipment_id": str (optional),
+  "flow_type": "consumption" | "production" | "generation" | "removal" | "recovery" | "loss" | "capacity" | "requirement",
+  "value": number (finite, non-negative),
+  "unit": string (one of the 17 units in the TypeScript registry),
+  "basis": "per_person" | "per_equipment" | "per_cycle" | "per_time" | "total",
+  "period": {"value": number, "unit": "second" | "minute" | "hour" | "day" | "cycle"} (required for per_time),
+  "classification": "research_data" | "engineering_inference" | "gameplay_assumption",
+  "data_status": "mock" | "pending_review" | "validated" | "TBD",
+  "source": {"title": str, "url": str|null, "identifier": str|null, "location": str|null} | null,
+  "assumptions": [str, ...],
+  "caveats": [str, ...]
 }
 """
 
@@ -23,162 +33,139 @@ def build_unified_parameters_list(
     crops_df: Optional[pd.DataFrame] = None,
     radiation_df: Optional[pd.DataFrame] = None
 ) -> List[Dict[str, Any]]:
-    """Assemble all parameters from research deliverables and NASA APIs into a unified list."""
+    """Assemble all parameters conforming to the TypeScript SimulationParameter contract into a unified list.
+
+    Note on NASA API Datasets (RadLab, DONKI, OSDR Bio):
+      - RadLab lunar dosimetry is measured in mSv/day and µSv/hour.
+      - DONKI particle flux is measured in pfu, and warning lead time in minutes.
+      - OSDR crop growth time is measured in days.
+      Since none of these units ('mSv/day', 'pfu', 'minute', 'day') exist in the
+      17-unit TypeScript unit registry, and converting them to abstract scores or
+      invented radiation damage units is scientifically unjustified, these parameters
+      are NOT emitted into mission_config.json. Instead:
+      - DONKI space weather events are mapped to outputs/emergency_scenarios.json.
+      - RadLab dosimetry is saved to data/processed/radiation_parameters.csv and tests/fixtures/.
+      - OSDR crops are saved to data/processed/crop_growth_parameters.csv.
+      - Their unsupported status is documented in TYPESCRIPT_COMPAT_STATUS.md.
+    """
     if research_df is None:
         research_df = load_research_parameters()
 
-    # 1. Transform research deliverables
+    # 1. Transform research deliverables (filters to valid TS contract parameters)
     base_parameters = transform_research_dataframe_to_parameters(research_df)
 
-    # 2. Add high-value live NASA API telemetry parameters
-    api_parameters = []
-
-    # RadLab GCR dosimetry
-    if radiation_df is not None and not radiation_df.empty:
-        rad_row = radiation_df.iloc[0]
-        api_parameters.append({
-            "parameter_id": "lunar_surface_gcr_dose_equivalent",
-            "resource": "radiation",
-            "flow_type": "environment",
-            "value_per_person": float(rad_row.get("daily_gcr_dose_msv", 1.37)),
-            "raw_value": "1.37",
-            "unit": "mSv/day",
-            "period": {"value": 1, "unit": "day"},
-            "data_status": "research_reference",
-            "source": str(rad_row.get("source", "NASA OSDR RadLab & Chang'e-4")),
-            "assumptions": ["Surface detector telemetry; biological tissue dose requires model weighting"],
-            "notes": "Chang'e-4 derived GCR dose-equivalent rate on lunar surface"
-        })
-
-    # DONKI Solar Particle Event parameters
-    if donki_sep_df is not None and not donki_sep_df.empty:
-        sep_row = donki_sep_df.iloc[0]
-        spe_lead_time = float(sep_row.get("warning_lead_time_minutes") or 30.0)
-        if spe_lead_time < 15.0:
-            spe_lead_time = 30.0
-        api_parameters.append({
-            "parameter_id": "spe_solar_particle_warning_time",
-            "resource": "radiation",
-            "flow_type": "environment",
-            "value_per_person": spe_lead_time,
-            "raw_value": str(spe_lead_time),
-            "unit": "minute",
-            "period": {"value": 1, "unit": "day"},
-            "data_status": "research_reference",
-            "source": "NASA CCMC DONKI (api.nasa.gov/DONKI)",
-            "assumptions": ["Lead time from flare observation to energetic proton arrival at near-Earth/Moon"],
-            "notes": f"DONKI historical SPE warning lead time (Associated flare: {sep_row.get('associated_flare_class', 'X-class')})"
-        })
-        api_parameters.append({
-            "parameter_id": "spe_peak_proton_flux",
-            "resource": "radiation",
-            "flow_type": "environment",
-            "value_per_person": float(sep_row.get("estimated_flux_pfu", 1000.0)),
-            "raw_value": str(sep_row.get("estimated_flux_pfu", 1000.0)),
-            "unit": "pfu",
-            "period": {"value": 1, "unit": "day"},
-            "data_status": "research_reference",
-            "source": "NASA CCMC DONKI",
-            "assumptions": [">10 MeV solar proton flux exceeding threshold"],
-            "notes": f"Historical solar proton event flux ({sep_row.get('noaa_scale', 'S3')} scale)"
-        })
-
-    # OSDR Crop Parameters
-    if crops_df is not None and not crops_df.empty:
-        for _, crop in crops_df.iterrows():
-            cid = crop["crop_id"]
-            pid = f"crop_growth_time_{cid}" if cid == "lettuce_veg03a" else f"flight_crop_growth_time_{cid}"
-            api_parameters.append({
-                "parameter_id": pid,
-                "resource": "food",
-                "flow_type": "infrastructure",
-                "value_per_person": float(crop["first_harvest_days"]),
-                "raw_value": str(crop["first_harvest_days"]),
-                "unit": "day",
-                "period": {"value": 1, "unit": "day"},
-                "data_status": str(crop.get("classification", "research reference")).lower().replace(" ", "_"),
-                "source": str(crop.get("source")),
-                "assumptions": [str(crop.get("caveats", ""))[:150]],
-                "notes": f"{crop['common_name']} first harvest cycle ({crop['harvest_cycle_type']})"
-            })
-
-    # Canonical aliases mapping directly to research deliverables values
-    canonical_aliases = [
+    # 2. Canonical aliases for simulation engine ease-of-use
+    canonical_aliases: List[Dict[str, Any]] = [
         {
             "parameter_id": "crew_oxygen_consumption",
             "resource": "oxygen",
             "flow_type": "consumption",
-            "value_per_person": 0.89,
-            "raw_value": "~0.89",
-            "unit": "kg/person/day",
+            "value": 0.89,
+            "unit": "kg",
+            "basis": "per_person",
             "period": {"value": 1, "unit": "day"},
-            "data_status": "research_reference",
-            "source": "NASA reference astronaut model (82 kg astronaut, incl. 90 min exercise)",
+            "classification": "research_data",
+            "data_status": "pending_review",
+            "source": {
+                "title": "Astronaut Mass Balance for Long Duration Missions",
+                "url": "https://ntrs.nasa.gov/citations/20190027563",
+                "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+                "location": "82 kg reference astronaut model incl. 90 min exercise"
+            },
             "assumptions": [],
-            "notes": "Core alias for daily_o2_requirement_per_astronaut from simulation-parameter-sheet.md §3.1"
+            "caveats": ["Canonical alias for daily_o2_requirement_per_astronaut (simulation-parameter-sheet.md §3.1)"]
         },
         {
             "parameter_id": "crew_co2_production",
             "resource": "co2",
             "flow_type": "production",
-            "value_per_person": 1.08,
-            "raw_value": "~1.08",
-            "unit": "kg/person/day",
+            "value": 1.08,
+            "unit": "kg",
+            "basis": "per_person",
             "period": {"value": 1, "unit": "day"},
-            "data_status": "research_reference",
-            "source": "NASA reference astronaut model",
+            "classification": "research_data",
+            "data_status": "pending_review",
+            "source": {
+                "title": "Astronaut Mass Balance for Long Duration Missions",
+                "url": "https://ntrs.nasa.gov/citations/20190027563",
+                "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+                "location": "82 kg reference astronaut CO₂ production rate"
+            },
             "assumptions": [],
-            "notes": "Core alias for daily_co2_production_per_astronaut from simulation-parameter-sheet.md §3.1"
+            "caveats": ["Canonical alias for daily_co2_production_per_astronaut (simulation-parameter-sheet.md §3.1)"]
         },
         {
             "parameter_id": "crew_water_requirement",
             "resource": "water",
-            "flow_type": "consumption",
-            "value_per_person": 5.03,
-            "raw_value": "~5.03",
-            "unit": "kg/person/day (≈ L/person/day)",
+            "flow_type": "requirement",
+            "value": 5.03,
+            "unit": "kg",
+            "basis": "per_person",
             "period": {"value": 1, "unit": "day"},
-            "data_status": "research_reference",
-            "source": "NASA 2019 mass-balance study",
+            "classification": "research_data",
+            "data_status": "pending_review",
+            "source": {
+                "title": "Astronaut Mass Balance for Long Duration Missions",
+                "url": "https://ntrs.nasa.gov/citations/20190027563",
+                "identifier": "NASA NTRS 20190027563",
+                "location": "Total daily water requirement per astronaut (drinking + food preparation + hygiene)"
+            },
             "assumptions": [],
-            "notes": "Core alias for daily_water_requirement_per_astronaut from simulation-parameter-sheet.md §3.2"
+            "caveats": [
+                "Canonical alias for daily_water_requirement_per_astronaut (simulation-parameter-sheet.md §3.2)",
+                "Value includes potable water, food rehydration, and hygiene water"
+            ]
         },
         {
             "parameter_id": "crew_food_energy",
             "resource": "food",
             "flow_type": "consumption",
-            "value_per_person": 3000.0,
-            "raw_value": "~2,500–3,500",
-            "unit": "kcal/person/day",
+            "value": 3000.0,
+            "unit": "kcal",
+            "basis": "per_person",
             "period": {"value": 1, "unit": "day"},
-            "data_status": "research_reference",
-            "source": "NASA STEMonstration: Nutrition (2018); Science Friday (2022)",
+            "classification": "research_data",
+            "data_status": "pending_review",
+            "source": {
+                "title": "NASA STEMonstration: Nutrition & ISS Food Systems",
+                "url": "https://www.nasa.gov/stem-content/stemonstrations-nutrition",
+                "identifier": "NASA STEM Education / Science Friday 2022",
+                "location": "Astronaut Caloric Requirements Guidelines"
+            },
             "assumptions": [],
-            "notes": "Core alias for energy_requirement_per_astronaut from simulation-parameter-sheet.md §3.6"
+            "caveats": [
+                "Canonical alias for energy_requirement_per_astronaut (simulation-parameter-sheet.md §3.6)",
+                "Mid-point of 2,500–3,500 kcal/day range; actual requirement varies with activity level"
+            ]
         },
         {
             "parameter_id": "crew_food_mass",
             "resource": "food",
             "flow_type": "consumption",
-            "value_per_person": 2.39,
-            "raw_value": "2.39",
-            "unit": "kg/person/day",
+            "value": 2.39,
+            "unit": "kg",
+            "basis": "per_person",
             "period": {"value": 1, "unit": "day"},
-            "data_status": "research_reference",
-            "source": "Ewert 2019 (NASA, NTRS 20190027563) citing NASA BVAD Table 4-53",
+            "classification": "research_data",
+            "data_status": "pending_review",
+            "source": {
+                "title": "Astronaut Mass Balance for Long Duration Missions",
+                "url": "https://ntrs.nasa.gov/citations/20190027563",
+                "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+                "location": "Packaged food mass per astronaut per day"
+            },
             "assumptions": [],
-            "notes": "Core alias for packaged_food_per_astronaut from simulation-parameter-sheet.md §3.6"
+            "caveats": ["Canonical alias for packaged_food_per_astronaut (simulation-parameter-sheet.md §3.6)"]
         }
     ]
 
-    # Combine: base research parameters take precedence, then API parameters, then canonical aliases
-    all_params_dict = {}
+    # Combine: base parameters first, then aliases (if not already present)
+    all_params_dict: Dict[str, Dict[str, Any]] = {}
     for p in base_parameters:
         all_params_dict[p["parameter_id"]] = p
-    for p in api_parameters:
-        all_params_dict[p["parameter_id"]] = p
     for p in canonical_aliases:
-        all_params_dict[p["parameter_id"]] = p
+        if p["parameter_id"] not in all_params_dict:
+            all_params_dict[p["parameter_id"]] = p
 
     return list(all_params_dict.values())
 

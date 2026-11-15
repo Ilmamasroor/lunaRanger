@@ -41,11 +41,33 @@ class MissionAPIHandler(BaseHTTPRequestHandler):
                     "/api/mission-config",
                     "/api/scenarios/emergency",
                     "/api/fixtures/life-support",
-                    "/api/fixtures/radiation"
+                    "/api/fixtures/radiation",
+                    "/api/reports/unresolved",
+                    "/api/reports/unsupported-units"
                 ]
             }
             self._set_headers(200)
             self.wfile.write(json.dumps(payload, indent=2).encode("utf-8"))
+            return
+
+        if path in ("/api/reports/unresolved", "/api/reports/unresolved-parameters"):
+            try:
+                from src.processing.process_research_parameters import get_unresolved_parameters_report
+                report = get_unresolved_parameters_report()
+                self._set_headers(200)
+                self.wfile.write(json.dumps({"count": len(report), "unresolved_parameters": report}, indent=2).encode("utf-8"))
+            except Exception as e:
+                self._send_error(500, f"Error generating unresolved report: {e}")
+            return
+
+        if path in ("/api/reports/unsupported-units", "/api/reports/unsupported"):
+            try:
+                from src.processing.process_research_parameters import get_unsupported_unit_parameters_report
+                report = get_unsupported_unit_parameters_report()
+                self._set_headers(200)
+                self.wfile.write(json.dumps({"count": len(report), "unsupported_unit_parameters": report}, indent=2).encode("utf-8"))
+            except Exception as e:
+                self._send_error(500, f"Error generating unsupported units report: {e}")
             return
 
         if path in ("/api/mission-config", "/api/config"):
