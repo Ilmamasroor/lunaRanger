@@ -121,12 +121,14 @@ These references support learning context; they do not by themselves validate th
 
 ## Contributing
 
-Please do not push directly to `main`. Work on a feature branch and open a pull request for review:
+To keep the `main` branch stable, please follow this workflow:
 
-1. Create a branch from the current `main`.
-2. Make focused changes and run the relevant checks.
-3. Open a PR describing the change, evidence, tests and any known limitations.
-4. Wait for review before merging.
+1. Create a feature branch from `main`.
+2. Commit and push your changes to that branch.
+3. Open a pull request targeting `main`.
+4. Get your changes reviewed before merging.
+
+Direct pushes to `main` are not permitted.
 
 ## Licence
 
