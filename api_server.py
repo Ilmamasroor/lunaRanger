@@ -31,7 +31,7 @@ class MissionAPIHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         # Normalize path
         path = self.path.split("?")[0].rstrip("/")
-        
+
         if path in ("", "/api", "/api/health"):
             payload = {
                 "status": "healthy",
