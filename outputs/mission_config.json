@@ -1,0 +1,616 @@
+{
+  "schema_version": "1.1",
+  "mission": {
+    "crew_size": 4
+  },
+  "parameters": [
+    {
+      "parameter_id": "sleeping_o2_consumption",
+      "resource": "oxygen",
+      "flow_type": "consumption",
+      "value": 0.37,
+      "unit": "g",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "minute"
+      }
+    },
+    {
+      "parameter_id": "nominal_activity_o2_consumption",
+      "resource": "oxygen",
+      "flow_type": "consumption",
+      "value": 0.59,
+      "unit": "g",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "minute"
+      }
+    },
+    {
+      "parameter_id": "aerobic_exercise_o2_consumption",
+      "resource": "oxygen",
+      "flow_type": "consumption",
+      "value": 3.99,
+      "unit": "g",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [
+        "Applies only to scheduled exercise windows; MUST NOT be used as an EVA rate"
+      ],
+      "caveats": [
+        "Applies only to scheduled exercise windows. **MUST NOT be used as an EVA O\u2082 rate.**"
+      ],
+      "period": {
+        "value": 1,
+        "unit": "minute"
+      }
+    },
+    {
+      "parameter_id": "daily_o2_requirement_per_astronaut",
+      "resource": "oxygen",
+      "flow_type": "requirement",
+      "value": 0.89,
+      "unit": "kg",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "day"
+      }
+    },
+    {
+      "parameter_id": "daily_co2_production_per_astronaut",
+      "resource": "co2",
+      "flow_type": "production",
+      "value": 1.08,
+      "unit": "kg",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "day"
+      }
+    },
+    {
+      "parameter_id": "daily_o2_requirement_4_crew",
+      "resource": "oxygen",
+      "flow_type": "requirement",
+      "value": 3.56,
+      "unit": "kg/day",
+      "basis": "per_time",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 0.89 \u00d7 4",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "day"
+      }
+    },
+    {
+      "parameter_id": "daily_co2_production_4_crew",
+      "resource": "co2",
+      "flow_type": "production",
+      "value": 4.32,
+      "unit": "kg/day",
+      "basis": "per_time",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 1.08 \u00d7 4",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "day"
+      }
+    },
+    {
+      "parameter_id": "30_day_o2_requirement_4_crew",
+      "resource": "oxygen",
+      "flow_type": "requirement",
+      "value": 106.8,
+      "unit": "kg",
+      "basis": "total",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 3.56 \u00d7 30",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [
+        "Assumes constant crew and no recovery losses; real mission needs more."
+      ]
+    },
+    {
+      "parameter_id": "30_day_co2_production_4_crew",
+      "resource": "co2",
+      "flow_type": "production",
+      "value": 129.6,
+      "unit": "kg",
+      "basis": "total",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 4.32 \u00d7 30",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [
+        "Assumes constant crew and no recovery losses; real mission needs more."
+      ]
+    },
+    {
+      "parameter_id": "daily_water_requirement_per_astronaut",
+      "resource": "water",
+      "flow_type": "requirement",
+      "value": 5.03,
+      "unit": "kg",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "day"
+      }
+    },
+    {
+      "parameter_id": "daily_water_requirement_4_crew",
+      "resource": "water",
+      "flow_type": "requirement",
+      "value": 20.12,
+      "unit": "kg/day",
+      "basis": "per_time",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 5.03 \u00d7 4; not automatically a potable-tank withdrawal",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "day"
+      }
+    },
+    {
+      "parameter_id": "30_day_water_requirement_4_crew",
+      "resource": "water",
+      "flow_type": "requirement",
+      "value": 603.6,
+      "unit": "kg",
+      "basis": "total",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 20.12 \u00d7 30; not a net make-up-water or tank-sizing value",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [
+        "Assumes constant crew and no recovery losses; real mission needs more."
+      ]
+    },
+    {
+      "parameter_id": "humidity_condensate_recovery",
+      "resource": "water",
+      "flow_type": "recovery",
+      "value": 99.0,
+      "unit": "percent",
+      "basis": "per_equipment",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA 2019 model (per-stream model figure)",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [
+        "Per-stream model figure; do not automatically apply this rate to crop transpiration or a lunar habitat."
+      ]
+    },
+    {
+      "parameter_id": "urine_water_recovery",
+      "resource": "water",
+      "flow_type": "recovery",
+      "value": 85.0,
+      "unit": "percent",
+      "basis": "per_equipment",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA 2019 model (per-stream model figure)",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [
+        "Per-stream model figure."
+      ]
+    },
+    {
+      "parameter_id": "overall_iss_water_recovery_milestone",
+      "resource": "water",
+      "flow_type": "recovery",
+      "value": 98.0,
+      "unit": "percent",
+      "basis": "total",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA Achieves Water Recovery Milestone on International Space Station",
+        "url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+        "identifier": "NASA ISS ECLSS Milestone 2023",
+        "location": "Brine Processor Assembly (BPA) Telemetry Report"
+      },
+      "assumptions": [],
+      "caveats": [
+        "System-level milestone, NOT a guaranteed per-subsystem rate. Do not use as the gameplay default for every stream."
+      ]
+    },
+    {
+      "parameter_id": "iss_water_recovery_rate_before_brine_processor_assembly_bpa",
+      "resource": "water",
+      "flow_type": "recovery",
+      "value": 93.5,
+      "unit": "percent",
+      "basis": "per_equipment",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA Achieves Water Recovery Milestone on International Space Station",
+        "url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+        "identifier": "NASA ISS ECLSS Milestone 2023",
+        "location": "Brine Processor Assembly (BPA) Telemetry Report"
+      },
+      "assumptions": [],
+      "caveats": []
+    },
+    {
+      "parameter_id": "failed_brine_processor_fallback_rate_inferred",
+      "resource": "general",
+      "flow_type": "recovery",
+      "value": 93.5,
+      "unit": "percent",
+      "basis": "per_equipment",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA Achieves Water Recovery Milestone on International Space Station",
+        "url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+        "identifier": "NASA ISS ECLSS Milestone 2023",
+        "location": "Brine Processor Assembly (BPA) Telemetry Report"
+      },
+      "assumptions": [],
+      "caveats": [
+        "NASA documented 93\u201394 % as the ISS recovery rate before BPA was added (NASA 2023). Using this as the post-BPA-failure rate is an engineering inference, not a direct NASA statement. Other component failures require a modelling decision."
+      ]
+    },
+    {
+      "parameter_id": "fission_surface_power_target",
+      "resource": "power",
+      "flow_type": "generation",
+      "value": 40.0,
+      "unit": "kW",
+      "basis": "per_equipment",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA Fission Surface Power Project",
+        "url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/",
+        "identifier": "NASA STMD Technology Goal",
+        "location": "40 kW Continuous Power Target"
+      },
+      "assumptions": [],
+      "caveats": []
+    },
+    {
+      "parameter_id": "fission_daily_energy_mathematical_example",
+      "resource": "power",
+      "flow_type": "generation",
+      "value": 960.0,
+      "unit": "kWh",
+      "basis": "per_time",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA Fission Surface Power Project",
+        "url": "https://www.nasa.gov/exploration-systems-development-mission-directorate/fission-surface-power/",
+        "identifier": "NASA STMD Technology Goal",
+        "location": "40 kW Continuous Power Target"
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "day"
+      }
+    },
+    {
+      "parameter_id": "packaged_food_per_astronaut",
+      "resource": "food",
+      "flow_type": "consumption",
+      "value": 2.39,
+      "unit": "kg",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Table 4-53 & Section 3.1"
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "day"
+      }
+    },
+    {
+      "parameter_id": "packaged_food_4_crew",
+      "resource": "food",
+      "flow_type": "consumption",
+      "value": 9.56,
+      "unit": "kg/day",
+      "basis": "per_time",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 2.39 \u00d7 4",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "day"
+      }
+    },
+    {
+      "parameter_id": "30_day_packaged_food_4_crew",
+      "resource": "food",
+      "flow_type": "consumption",
+      "value": 286.8,
+      "unit": "kg",
+      "basis": "total",
+      "classification": "engineering_inference",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Derived: 9.56 \u00d7 30",
+        "url": null,
+        "identifier": null,
+        "location": null
+      },
+      "assumptions": [],
+      "caveats": [
+        "Assumes constant crew and no recovery losses; real mission needs more."
+      ]
+    },
+    {
+      "parameter_id": "energy_requirement_per_astronaut",
+      "resource": "food",
+      "flow_type": "requirement",
+      "value": 3000.0,
+      "unit": "kcal",
+      "basis": "per_person",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA STEMonstration: Nutrition & ISS Food Systems",
+        "url": "https://www.nasa.gov/stem-content/stemonstrations-nutrition",
+        "identifier": "NASA STEM Education / Science Friday 2022",
+        "location": "Astronaut Caloric Requirements Guidelines"
+      },
+      "assumptions": [],
+      "caveats": [],
+      "period": {
+        "value": 1,
+        "unit": "day"
+      }
+    },
+    {
+      "parameter_id": "crew_oxygen_consumption",
+      "resource": "oxygen",
+      "flow_type": "consumption",
+      "value": 0.89,
+      "unit": "kg",
+      "basis": "per_person",
+      "period": {
+        "value": 1,
+        "unit": "day"
+      },
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "82 kg reference astronaut model incl. 90 min exercise"
+      },
+      "assumptions": [],
+      "caveats": [
+        "Canonical alias for daily_o2_requirement_per_astronaut (simulation-parameter-sheet.md \u00a73.1)"
+      ]
+    },
+    {
+      "parameter_id": "crew_co2_production",
+      "resource": "co2",
+      "flow_type": "production",
+      "value": 1.08,
+      "unit": "kg",
+      "basis": "per_person",
+      "period": {
+        "value": 1,
+        "unit": "day"
+      },
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "82 kg reference astronaut CO\u2082 production rate"
+      },
+      "assumptions": [],
+      "caveats": [
+        "Canonical alias for daily_co2_production_per_astronaut (simulation-parameter-sheet.md \u00a73.1)"
+      ]
+    },
+    {
+      "parameter_id": "crew_water_requirement",
+      "resource": "water",
+      "flow_type": "requirement",
+      "value": 5.03,
+      "unit": "kg",
+      "basis": "per_person",
+      "period": {
+        "value": 1,
+        "unit": "day"
+      },
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563",
+        "location": "Total daily water requirement per astronaut (drinking + food preparation + hygiene)"
+      },
+      "assumptions": [],
+      "caveats": [
+        "Canonical alias for daily_water_requirement_per_astronaut (simulation-parameter-sheet.md \u00a73.2)",
+        "Value includes potable water, food rehydration, and hygiene water"
+      ]
+    },
+    {
+      "parameter_id": "crew_food_energy",
+      "resource": "food",
+      "flow_type": "consumption",
+      "value": 3000.0,
+      "unit": "kcal",
+      "basis": "per_person",
+      "period": {
+        "value": 1,
+        "unit": "day"
+      },
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA STEMonstration: Nutrition & ISS Food Systems",
+        "url": "https://www.nasa.gov/stem-content/stemonstrations-nutrition",
+        "identifier": "NASA STEM Education / Science Friday 2022",
+        "location": "Astronaut Caloric Requirements Guidelines"
+      },
+      "assumptions": [],
+      "caveats": [
+        "Canonical alias for energy_requirement_per_astronaut (simulation-parameter-sheet.md \u00a73.6)",
+        "Mid-point of 2,500\u20133,500 kcal/day range; actual requirement varies with activity level"
+      ]
+    },
+    {
+      "parameter_id": "crew_food_mass",
+      "resource": "food",
+      "flow_type": "consumption",
+      "value": 2.39,
+      "unit": "kg",
+      "basis": "per_person",
+      "period": {
+        "value": 1,
+        "unit": "day"
+      },
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Packaged food mass per astronaut per day"
+      },
+      "assumptions": [],
+      "caveats": [
+        "Canonical alias for packaged_food_per_astronaut (simulation-parameter-sheet.md \u00a73.6)"
+      ]
+    }
+  ]
+}
