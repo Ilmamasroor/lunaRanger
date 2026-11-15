@@ -13,21 +13,14 @@ export default function DayCompleteModal({ dayData, onContinueToMap }) {
         {dayData.title}
       </p>
 
-      {/* Checklist items recap */}
-      <div className="space-y-2 mb-5 text-left">
-        <div className="bg-slate-800/80 border border-emerald-400/40 p-2.5 rounded-xl flex items-center gap-2.5">
-          <span className="text-emerald-400 text-sm">✔</span>
-          <span className="text-xs font-bold text-slate-100">Battery recovered</span>
-        </div>
-        <div className="bg-slate-800/80 border border-emerald-400/40 p-2.5 rounded-xl flex items-center gap-2.5">
-          <span className="text-emerald-400 text-sm">✔</span>
-          <span className="text-xs font-bold text-slate-100">Battery connected</span>
-        </div>
-        <div className="bg-slate-800/80 border border-emerald-400/40 p-2.5 rounded-xl flex items-center gap-2.5">
-          <span className="text-emerald-400 text-sm">✔</span>
-          <span className="text-xs font-bold text-slate-100">Heater repaired</span>
-        </div>
-      </div>
+      <ul aria-label="Completed objectives" className="space-y-2 mb-5 text-left">
+        {dayData.checklist.map(step => (
+          <li key={step} className="bg-slate-800/80 border border-emerald-400/40 p-2.5 rounded-xl flex items-center gap-2.5">
+            <span aria-hidden="true" className="text-emerald-400 text-sm">✔</span>
+            <span className="text-xs font-bold text-slate-100">{step}</span>
+          </li>
+        ))}
+      </ul>
 
       {/* What You Learned Card */}
       <div className="bg-indigo-950/70 border border-indigo-400/50 p-3.5 rounded-2xl text-left mb-6">

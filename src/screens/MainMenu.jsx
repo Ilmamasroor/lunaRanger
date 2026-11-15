@@ -25,7 +25,7 @@ export default function MainMenu({ cadetName, setCadetName, avatar, setAvatar, o
         MISSION TO THE MOON!
       </h1>
       <p className="text-sm md:text-base text-cyan-200 max-w-md mx-auto mb-4 font-medium leading-relaxed">
-        Can YOU keep 4 astronauts safe at Shackleton Crater during a 7-day lunar night shift?
+        Can you keep four astronauts safe at Shackleton Crater and bring home a Moon rock in seven days?
       </p>
 
       {/* Avatar & Name Selector Box */}

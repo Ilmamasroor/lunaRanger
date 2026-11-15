@@ -1,120 +1,18 @@
-# 🚀 Abhinav's Unity WebGL Build Instructions
+# Unity WebGL in the React cockpit
 
-Hey Abhinav! Your Unity source code has been integrated into the React frontend.
-The bridge is **fully wired** to your `ResearchBridge.jslib` and `AirlockBridge.jslib`.
+Build the LunaRangers WebGL player from the Unity project with Editor 6000.2.7f2 and the LunaRangers template. Boot the DayOne scene, which contains the full campaign. From the repository root:
 
-All you need to do is **export a WebGL build** and drop the files in the right place.
+    npm ci
+    node scripts/stage-unity.mjs <Unity export directory>
+    npm run build
 
----
+The staging script decodes the export's Brotli assets to standard static files in public/Build. Serve dist via HTTP with the application/wasm content type for .wasm. The 2D walkthrough is a separate practice mode.
 
-## Step 1 — Open Unity Project
+Unity reports play state through lunarangers-campaign events. React adapts those events to Ilma's TypeScript mission engine for resource simulation, day progression, and sample return. Unity checks with the engine before opening the airlock on Days 1 and 6. The Day 5 cockpit exposes the engine denial during the replayed alert.
 
-Open the `unity/` folder from the repo root in Unity Hub.
-Recommended: **Unity 6** (LTS) with the **WebGL Build Support** module installed.
+## Research sources
 
----
-
-## Step 2 — Set the WebGL Template
-
-In Unity:
-1. Go to **Edit → Project Settings → Player**
-2. Under **WebGL** tab, find **Resolution and Presentation**
-3. Set **WebGL Template** to **LunaRangers** (already in `Assets/WebGLTemplates/LunaRangers/`)
-
----
-
-## Step 3 — Build for WebGL
-
-1. **File → Build Settings**
-2. Select **WebGL** as the platform (switch if needed)
-3. Make sure the **DayOne scene** is in the build list
-4. Click **Build** and choose an output folder (e.g. `D:\unity-webgl-build\`)
-
----
-
-## Step 4 — Copy Build Files to React
-
-After Unity finishes, copy **only the `Build/` subfolder** from your output into:
-
-```
-D:\NASA\luna-rangers-frontend\public\Build\
-```
-
-Then rename the files so they match exactly:
-
-| Unity output filename | Rename to |
-|----------------------|-----------|
-| `*.loader.js` | `LunaRangers.loader.js` |
-| `*.data` or `*.data.br` | `LunaRangers.data` |
-| `*.framework.js` | `LunaRangers.framework.js` |
-| `*.wasm` or `*.wasm.br` | `LunaRangers.wasm` |
-
-> **Note:** If Unity exported compressed files (`.br` or `.gz`), you'll need to either:
-> - Rebuild with **Compression Format: Disabled** in Player Settings → WebGL, OR
-> - Configure the Vite dev server to serve them with correct Content-Encoding headers
-
----
-
-## Step 5 — Test the Integration
-
-```powershell
-cd D:\NASA\luna-rangers-frontend
-node "C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js" run dev
-```
-
-Open `http://localhost:5173`, start a mission — your Unity game should load inside the React HUD!
-
----
-
-## How the Bridge Works (Already Wired!)
-
-Your `.jslib` files dispatch CustomEvents. React listens to them automatically:
-
-```js
-// Your ResearchBridge.jslib (fires from Unity C#):
-window.dispatchEvent(new CustomEvent("unity-research-state", {
-  detail: {
-    step: "Collect",        // "Exit" | "Collect" | "Return" | "Dock" | "Repair"
-    feedback: "Bring the spare battery inside.",
-    secondsLeft: 180.0,
-    water: 100,
-    health: 100,
-    outside: false,
-    finished: false,
-    needsRetry: false,
-    objectiveName: "Spare battery"
-  }
-}));
-
-// Your AirlockBridge.jslib (fires from Unity C#):
-window.dispatchEvent(new CustomEvent("unity-airlock", { detail: "open" }));
-window.dispatchEvent(new CustomEvent("unity-airlock", { detail: "close" }));
-```
-
-React HUD responds to these automatically:
-- ✅ Checklist items tick off based on `step`
-- ✅ Suit timer appears / disappears based on `outside`
-- ✅ Water & health bars update
-- ✅ Action prompt updates from `feedback`
-- ✅ Day Complete triggers when `finished: true`
-
----
-
-## Testing Without a Build (Browser Console)
-
-You can test the bridge right now in the browser console:
-
-```js
-// Simulate player picking up battery
-window.dispatchEvent(new CustomEvent('unity-research-state', {
-  detail: { step: 'Collect', feedback: 'Battery collected!', secondsLeft: 180, water: 95, health: 100, outside: false, finished: false, needsRetry: false }
-}));
-
-// Simulate going outside (triggers suit timer)
-window.dispatchEvent(new CustomEvent('unity-airlock', { detail: 'open' }));
-
-// Simulate day complete
-window.dispatchEvent(new CustomEvent('unity-research-state', {
-  detail: { step: 'Repair', feedback: 'Heater is on!', secondsLeft: 120, water: 90, health: 100, outside: false, finished: true, needsRetry: false }
-}));
-```
+- The team data snapshot in src/data/pipeline-snapshot.json identifies the data pipeline commit. Its food, water, CO2, and O2 references are inputs to the daily resource simulation. The ISS water recovery milestone is used as a training coefficient. Starting inventories, energy rates, air scrubber efficiency, and clearance thresholds are game settings.
+- NASA CCMC DONKI. An archived solar particle event from May 2024 triggers the Day 5 simulation alert. https://ccmc.gsfc.nasa.gov/tools/DONKI/
+- NASA RadLab. The Day 5 briefing shows an archived ISS DosTel2 detector reading returned by the public RadLab API, alongside the published lunar detector measurement used as the pipeline's fallback. These are research references. https://visualization.osdr.nasa.gov/radlab/gui/data-api/
+- NASA OSDR OSD-269. The Day 7 briefing links the ISS lettuce study as nutrition context. The study is a learning reference. https://osdr.nasa.gov/bio/repo/data/studies/OSD-269

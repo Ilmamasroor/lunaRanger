@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
 import Header from './components/Header';
 import Starfield from './components/Starfield';
 import MainMenu from './screens/MainMenu';
@@ -17,6 +17,13 @@ export default function App() {
   const [cadetName, setCadetName] = useState('Cadet Muneeba');
   const [avatar, setAvatar] = useState('👩‍🚀');
   const [dayIndex, setDayIndex] = useState(0); // 0 = Day 1
+  const [gameStarted, setGameStarted] = useState(false);
+  const completeDay = useCallback(() => setCurrentScreen('dayComplete'), []);
+  const goHome = () => {
+    setCurrentScreen('mainMenu');
+    setDayIndex(0);
+    setGameStarted(false);
+  };
 
   const currentDayData = MISSION_DAYS[dayIndex] || MISSION_DAYS[0];
 
@@ -29,10 +36,7 @@ export default function App() {
       <Header
         cadetName={cadetName}
         avatar={avatar}
-        onHomeClick={() => {
-          setCurrentScreen('mainMenu');
-          setDayIndex(0);
-        }}
+        onHomeClick={goHome}
       />
 
       {/* Main Screens Container */}
@@ -59,25 +63,28 @@ export default function App() {
           <MissionMapScreen
             currentDayIndex={dayIndex}
             onSelectDay={(selectedDayIdx) => {
-              setDayIndex(selectedDayIdx);
-              setCurrentScreen('dayGoal');
+              if (selectedDayIdx === dayIndex) setCurrentScreen('dayGoal');
             }}
-            onBackToHome={() => setCurrentScreen('mainMenu')}
+            onBackToHome={goHome}
           />
         )}
 
         {currentScreen === 'dayGoal' && (
           <DayGoalModal
             dayData={currentDayData}
-            onStartDay={() => setCurrentScreen('gameplay')}
+            onStartDay={() => {
+              setGameStarted(true);
+              setCurrentScreen('gameplay');
+            }}
             onBack={() => setCurrentScreen('trailMap')}
           />
         )}
 
-        {currentScreen === 'gameplay' && (
+        {gameStarted && (
           <Gameplay
+            active={currentScreen === 'gameplay'}
             dayData={currentDayData}
-            onCompleteDay={() => setCurrentScreen('dayComplete')}
+            onCompleteDay={completeDay}
           />
         )}
 
@@ -98,10 +105,7 @@ export default function App() {
 
         {currentScreen === 'debrief' && (
           <MissionDebrief
-            onBackToMainMenu={() => {
-              setDayIndex(0);
-              setCurrentScreen('mainMenu');
-            }}
+            onBackToMainMenu={goHome}
           />
         )}
       </main>

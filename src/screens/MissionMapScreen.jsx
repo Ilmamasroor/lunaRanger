@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { MISSION_DAYS } from '../data/missionConfig';
 import { playSound } from '../utils/soundFX';
 
 // OPTION B: Full-Screen Cinematic Orbital Flight Path across the Lunar Horizon
 export default function MissionMapScreen({ currentDayIndex, onSelectDay, onBackToHome }) {
-  const [selectedHoverDay, setSelectedHoverDay] = useState(null);
   const activeDayIndex = Math.min(currentDayIndex, MISSION_DAYS.length - 1);
   const activeDay = MISSION_DAYS[activeDayIndex];
 
   // 7 3D Orbital Coordinates sweeping gracefully across the lunar curve (in percentages for full responsiveness)
-  const waypoints = [
-    { day: 1, x: 12, y: 72, title: "Restore Heat", icon: "🔥", badge: "Base Life Support" },
-    { day: 2, x: 26, y: 52, title: "Clear Solar Dust", icon: "☀️", badge: "Solar Array Alpha" },
-    { day: 3, x: 40, y: 64, title: "Solar Storm Shield", icon: "🛡️", badge: "Radiation Bunker" },
-    { day: 4, x: 54, y: 38, title: "Water Loop Recycle", icon: "💧", badge: "Hydro Filtration" },
-    { day: 5, x: 67, y: 55, title: "CO2 Scrubber Reset", icon: "🔄", badge: "Atmosphere Recirc" },
-    { day: 6, x: 80, y: 32, title: "Greenhouse Oxygen", icon: "🌱", badge: "Botanical Bio-Dome" },
-    { day: 7, x: 92, y: 48, title: "Ice Core Samples", icon: "🪨", badge: "Shackleton Crater" }
-  ];
+  const waypoints = [[12, 72], [26, 52], [40, 64], [54, 38], [67, 55], [80, 32], [92, 48]]
+    .map(([x, y], i) => ({ x, y, ...MISSION_DAYS[i], badge: MISSION_DAYS[i].knowledgeBubbles[0].title }));
+  const trail = 'M 120 720 Q 200 400 260 520 T 400 640 T 540 380 T 670 550 T 800 320 T 920 480';
 
   // Active rocket coordinates
   const currentTarget = waypoints[activeDayIndex];
@@ -72,7 +65,8 @@ export default function MissionMapScreen({ currentDayIndex, onSelectDay, onBackT
 
       {/* ================= 3. FULL-SCREEN SVG COSMIC RIVER & WAYPOINTS ================= */}
       <div className="relative flex-1 w-full h-full z-20">
-        <svg className="w-full h-full absolute inset-0 pointer-events-none overflow-visible">
+        <svg viewBox="0 0 1000 1000" preserveAspectRatio="none" aria-hidden="true"
+          className="w-full h-full absolute inset-0 pointer-events-none overflow-visible">
           <defs>
             {/* Iridescent glowing cosmic trail gradient */}
             <linearGradient id="orbitalPathGrad" x1="0%" y1="100%" x2="100%" y2="0%">
@@ -94,7 +88,7 @@ export default function MissionMapScreen({ currentDayIndex, onSelectDay, onBackT
 
           {/* Deep Ambient Shadow Guide Trail */}
           <path
-            d="M 12% 72% Q 20% 40%, 26% 52% T 40% 64% T 54% 38% T 67% 55% T 80% 32% T 92% 48%"
+            d={trail}
             fill="none"
             stroke="rgba(2, 6, 23, 0.95)"
             strokeWidth="24"
@@ -103,7 +97,7 @@ export default function MissionMapScreen({ currentDayIndex, onSelectDay, onBackT
 
           {/* Glowing Cosmic Energy Ribbon */}
           <path
-            d="M 12% 72% Q 20% 40%, 26% 52% T 40% 64% T 54% 38% T 67% 55% T 80% 32% T 92% 48%"
+            d={trail}
             fill="none"
             stroke="url(#orbitalPathGrad)"
             strokeWidth="5"
@@ -113,7 +107,7 @@ export default function MissionMapScreen({ currentDayIndex, onSelectDay, onBackT
 
           {/* Pulsing Starlight Energy Particles along path */}
           <path
-            d="M 12% 72% Q 20% 40%, 26% 52% T 40% 64% T 54% 38% T 67% 55% T 80% 32% T 92% 48%"
+            d={trail}
             fill="none"
             stroke="#FFFFFF"
             strokeWidth="3"
@@ -134,8 +128,6 @@ export default function MissionMapScreen({ currentDayIndex, onSelectDay, onBackT
               key={pt.day}
               style={{ left: `${pt.x}%`, top: `${pt.y}%` }}
               className="absolute -translate-x-1/2 -translate-y-1/2 z-20 group"
-              onMouseEnter={() => setSelectedHoverDay(pt)}
-              onMouseLeave={() => setSelectedHoverDay(null)}
             >
               {/* Sci-Fi Target Reticle Ping for Current Mission */}
               {isCurrent && (
@@ -148,12 +140,12 @@ export default function MissionMapScreen({ currentDayIndex, onSelectDay, onBackT
               {/* Holographic Sphere Button */}
               <button
                 onClick={() => {
-                  if (!isLocked) {
-                    playSound(isCurrent ? 'power' : 'click');
+                  if (isCurrent) {
+                    playSound('power');
                     onSelectDay(i);
                   }
                 }}
-                disabled={isLocked}
+                disabled={!isCurrent}
                 className={`relative w-14 h-14 md:w-16 md:h-16 rounded-full flex flex-col items-center justify-center transition-all duration-300 transform cursor-pointer select-none ${
                   isCurrent
                     ? 'scale-125 bg-gradient-to-tr from-amber-600 via-yellow-400 to-amber-200 shadow-[0_0_35px_rgba(251,191,36,0.9)] border-2 border-white'

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import CircularBubble from '../components/CircularBubble';
 import { playSound } from '../utils/soundFX';
+import pipeline from '../data/pipeline-snapshot.json';
 
 // Custom Sci-Fi Vector Badges for Lightning & Battery
 function PowerRelayBadge() {
@@ -30,9 +31,7 @@ export default function DayGoalModal({ dayData, onStartDay, onBack }) {
     <section className="w-full max-w-4xl bg-slate-900/95 border-2 border-cyan-400/60 rounded-3xl p-6 md:p-8 backdrop-blur-xl shadow-2xl text-center relative overflow-hidden">
       
       {/* Top Realistic Sci-Fi Power Badge */}
-      <div className="flex justify-center">
-        <PowerRelayBadge />
-      </div>
+      {dayData.day === 1 && <div className="flex justify-center"><PowerRelayBadge /></div>}
 
       <h2 className="font-scifi text-2xl md:text-3xl font-black text-cyan-300 uppercase tracking-wider mb-0.5 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
         DAY {dayData.day} OF 7
@@ -43,6 +42,17 @@ export default function DayGoalModal({ dayData, onStartDay, onBack }) {
       <p className="text-xs md:text-sm text-slate-200 mb-4 max-w-xl mx-auto leading-relaxed">
         {dayData.subtitle}
       </p>
+      {dayData.day === 5 && (
+        <aside className="mb-4 rounded-xl border border-cyan-800 bg-slate-950 p-3 text-left text-sm text-slate-200">
+          <p><a className="text-cyan-300 underline" href="https://ccmc.gsfc.nasa.gov/tools/DONKI/" target="_blank" rel="noreferrer">NASA DONKI</a> archived event · {pipeline.donki.provenance.activity_id} ({pipeline.donki.noaa_scale}). Mission Control replays this alert and blocks spacewalks until the next training day.</p>
+          <p className="mt-2"><a className="text-cyan-300 underline" href={pipeline.radlab.iss.source} target="_blank" rel="noreferrer">NASA RadLab</a> · ISS {pipeline.radlab.iss.instrument} recorded {pipeline.radlab.iss.absorbedDoseRate.toFixed(2)} μGy/hour on {pipeline.radlab.iss.timestamp.slice(0, 10)}. The team’s pipeline also references the <a className="text-cyan-300 underline" href={pipeline.radlab.reference} target="_blank" rel="noreferrer">Chang’e-4 lunar measurement</a> of {pipeline.radlab.absorbedDoseRate} ± {pipeline.radlab.uncertainty} μGy/hour in silicon. These readings describe detector exposure in two different places.</p>
+        </aside>
+      )}
+      {dayData.day === 7 && (
+        <aside className="mb-4 rounded-xl border border-cyan-800 bg-slate-950 p-3 text-left text-sm text-slate-200">
+          <p><a className="text-cyan-300 underline" href="https://osdr.nasa.gov/bio/repo/data/studies/OSD-269" target="_blank" rel="noreferrer">NASA OSDR {pipeline.osdr.studyId}</a> · This ISS study compared space-grown lettuce with lettuce grown on Earth. Fresh crops can supplement packaged food on longer missions.</p>
+        </aside>
+      )}
 
       {/* Broad Lunar Bubble Chamber Container */}
       <div className="relative w-full h-72 md:h-80 bg-gradient-to-b from-indigo-950/80 via-slate-950/95 to-slate-900/90 border-2 border-cyan-500/40 rounded-2xl p-4 overflow-hidden shadow-inner flex flex-col justify-between mb-6">
