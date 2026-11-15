@@ -1,0 +1,5 @@
+resource,value_per_person,unit,period,data_status
+oxygen,0.9,kg,day,mock
+water,5.0,kg,day,mock
+food,3000.0,kcal,day,mock
+co2,1.1,kg,day,mock

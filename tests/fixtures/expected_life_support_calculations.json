@@ -1,0 +1,28 @@
+{
+  "benchmark_crew_size_4": {
+    "crew_size": 4,
+    "daily_o2_demand_kg": 3.56,
+    "daily_co2_production_kg": 4.32,
+    "daily_water_requirement_kg": 20.12,
+    "daily_urine_water_reference_kg": 5.6,
+    "daily_humidity_water_reference_kg": 12.16,
+    "daily_packaged_food_kg": 9.56,
+    "daily_electrolysis_feed_min_kg": 4.01,
+    "mission_30d_o2_demand_kg": 106.8,
+    "mission_30d_co2_production_kg": 129.6,
+    "mission_30d_packaged_food_kg": 286.8
+  },
+  "scenarios": {
+    "scenario_1_solar_power_loss": {
+      "description": "CO2 scrubbers and electrolysis unpowered; CO2 accumulates, O2 reserves deplete",
+      "final_stored_o2_kg": 0.0,
+      "final_cabin_co2_kg": 129.6,
+      "cascade_triggered": "air_quality_emergency_high_co2"
+    },
+    "scenario_2_water_recycling_failure": {
+      "description": "Recycling efficiency degrades to 93% pre-BPA rate",
+      "final_stored_water_kg": 42.4,
+      "cascade_triggered": null
+    }
+  }
+}

@@ -1,0 +1,778 @@
+message_id,message_type,issue_time,event_id,associated_flare_class,active_region,warning_lead_time_minutes,noaa_scale,energy_channel,estimated_flux_pfu,summary_snippet,source,classification,origin_type,v1_safe,caveats
+20240501-AL-001,FLR,2024-05-01 00:38:00+00:00,2024-04-30T23:23:00-FLR-001.,M9.5,13654.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-04-30T23:23Z. 
+
+Flare peak time: 2024-04-30T23:46Z.
+
+Flare intensity: M9.5 class.
+
+Source region: S06W63 (Active Region 13654) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240501-AL-002,CME,2024-05-01 16:47:00+00:00,2024-05-01T06:36:00-CME-001,,,,,,,"C-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-01T06:36Z.
+
+Estimated speed: ~794 km/s.
+
+Estimated opening half-angle: 42 deg.
+
+Direction (lon./lat.): 65/-22 in Heliocentric",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240501-7D-001,REPORT,2024-05-01 21:19:00+00:00,,,13654.0,,,,,"Solar activity was at moderate to high levels during this reporting period with 19 M-class flares, 1 O-type CME, and 5 C-type CMEs (see details below).   
+
+Based on preliminary analysis by the Moon to",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240502-AL-001,IPS,2024-05-02 13:45:00+00:00,2024-05-02T07:46:00-IPS-001.,,13659.0,,,,,"Significant interplanetary shock detected by DSCOVR at L1 at 2024-05-02T07:46Z. 
+
+The shock may be caused by a transient CME arrival and/or a coronal hole high speed stream. Magnetospheric compression",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240502-AL-002,MPC,2024-05-02 14:54:00+00:00,2024-05-02T15:49:00-MPC-001.,,,,,,,Strong compression of the magnetosphere detected. Simulations carried out at NASA Community Coordinated Modeling Center indicate that the magnetopause separating magnetospheric and solar wind plasma i,NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240502-AL-003,MPC,2024-05-02 15:01:00+00:00,2024-05-02T15:49:00-MPC-001.,,,,,,,Strong compression of the magnetosphere detected. Simulations carried out at NASA Community Coordinated Modeling Center indicate that the magnetopause separating magnetospheric and solar wind plasma i,NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240502-AL-004,GST,2024-05-02 18:44:00+00:00,2024-05-02T15:00:00-GST-001.,,,,,,,"Ongoing space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 6.67 (strong) during the synoptic period 2024-05-02T15:00Z to 2024-05-02T18:00Z. 
+
+
+NASA spacecraft at ",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240502-AL-005,GST,2024-05-02 18:50:00+00:00,2024-05-02T15:00:00-GST-001.,,,,,,,"Ongoing space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 6.67 (strong) during the synoptic period 2024-05-02T15:00Z to 2024-05-02T18:00Z. 
+
+The storm is caused ",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240502-AL-006,GST,2024-05-02 21:34:00+00:00,2024-05-02T15:00:00-GST-001.,,,,,,,"Intensifying space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 6.67 (strong) during the synoptic period 2024-05-02T18:00Z to 2024-05-02T21:00Z. 
+
+
+NASA spacecraf",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240503-AL-001,FLR,2024-05-03 02:29:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-03T02:20Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240503-AL-002,FLR,2024-05-03 02:54:00+00:00,2024-05-03T02:11:00-FLR-001.,X1.6,13663.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-03T02:11Z. 
+
+Flare peak time: 2024-05-03T02:22Z.
+
+Flare intensity: X1.6 class.
+
+Source region: N26E05 (Active Region 13663) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240503-AL-003,CME,2024-05-03 15:33:00+00:00,2024-05-03T02:48:00-CME-001,X1.6,13663.0,,,,,"C-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-03T02:48Z.
+
+Estimated speed: ~972 km/s.
+
+Estimated opening half-angle: 18 deg.
+
+Direction (lon./lat.): -20/33 in Heliocentric",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240504-AL-001,FLR,2024-05-04 06:24:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-04T06:16Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240504-AL-002,FLR,2024-05-04 12:23:00+00:00,2024-05-04T06:02:00-FLR-001.,M9.1,13663.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-04T06:02Z. 
+
+Flare peak time: 2024-05-04T06:19Z.
+
+Flare intensity: M9.1 class.
+
+Source region: N26W09 (Active Region 13663) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240504-AL-003,CME,2024-05-04 20:21:00+00:00,2024-05-04T06:53:00-CME-001,M9.1,,,,,,"C-type CME detected by STEREO A. 
+
+Start time of the event: 2024-05-04T06:53Z.
+
+Estimated speed: ~863 km/s.
+
+Estimated opening half-angle: 13 deg.
+
+Direction (lon./lat.): -1/29 in Heliocentric Earth E",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240504-AL-004,CME,2024-05-04 21:35:00+00:00,2024-05-03T21:17:00-CME-001,,,,,,,"Multiple CMEs have been detected as follows:
+1: C-type CME detected by SOHO. 
+
+Start time of the event: 2024-05-03T21:17Z.
+
+Estimated speed: ~548 km/s.
+
+Estimated opening half-angle: 26 deg.
+
+Directio",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240504-AL-005,FLR,2024-05-04 23:50:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-04T23:39Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240505-AL-001,FLR,2024-05-05 01:30:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-05T01:24Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240505-AL-002,FLR,2024-05-05 02:25:00+00:00,2024-05-04T23:28:00-FLR-001.,M9.0,13663.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-04T23:28Z. 
+
+Flare peak time: 2024-05-04T23:48Z.
+
+Flare intensity: M9.0 class.
+
+Source region: N26W17 (Active Region 13663) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240505-AL-003,FLR,2024-05-05 02:34:00+00:00,2024-05-05T01:15:00-FLR-001.,M8.4,13663.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-05T01:15Z. 
+
+Flare peak time: 2024-05-05T01:27Z.
+
+Flare intensity: M8.4 class.
+
+Source region: N26W20 (Active Region 13663) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240505-AL-004,FLR,2024-05-05 06:04:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-05T05:58Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240505-AL-005,FLR,2024-05-05 10:02:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-05T09:57Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240505-AL-006,FLR,2024-05-05 11:58:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-05T11:50Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240505-AL-007,FLR,2024-05-05 12:28:00+00:00,2024-05-05T05:47:00-FLR-001.,X1.3,13663.0,,,,,"Significant flare was detected by GOES.
+
+Flare start time: 2024-05-05T05:47Z. 
+
+Flare peak time: 2024-05-05T06:01Z.
+
+Flare intensity: X1.3 class.
+
+Source region: N26W20 (Active Region 13663) (based on",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240505-AL-008,FLR,2024-05-05 12:29:00+00:00,2024-05-05T09:53:00-FLR-001.,M7.4,13663.0,,,,,"Significant flare was detected by GOES.
+
+Flare start time: 2024-05-05T09:53Z. 
+
+Flare peak time: 2024-05-05T10:00Z.
+
+Flare intensity: M7.4 class.
+
+Source region: N26W22 (Active Region 13663) (based on",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240505-AL-009,FLR,2024-05-05 12:30:00+00:00,2024-05-05T11:41:00-FLR-001.,X1.2,13663.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-05T11:41Z. 
+
+Flare peak time: 2024-05-05T11:54Z.
+
+Flare intensity: X1.2 class.
+
+Source region: N26W23 (Active Region 13663) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240505-AL-010,CME,2024-05-05 18:02:00+00:00,2024-05-05T02:09:00-CME-001,M8.4,3663.0,,,,,"Multiple CMEs have been detected as follows:
+1: C-type CME detected by STEREO A. 
+
+Start time of the event: 2024-05-05T02:09Z.
+
+Estimated speed: ~820 km/s.
+
+Estimated opening half-angle: 12 deg.
+
+Dire",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240506-AL-001,FLR,2024-05-06 06:18:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-06T06:08Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240506-AL-002,FLR,2024-05-06 12:15:00+00:00,2024-05-06T05:38:00-FLR-001.,X4.5,13663.0,,,,,"Significant flare was detected by GOES.
+
+Flare start time: 2024-05-06T05:38Z. 
+
+Flare peak time: 2024-05-06T06:35Z.
+
+Flare intensity: X4.5 class.
+
+Source region: N26W35 (Active Region 13663) (based on",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240507-AL-001,FLR,2024-05-07 06:23:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-07T06:15Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240507-AL-002,FLR,2024-05-07 11:48:00+00:00,2024-05-07T05:58:00-FLR-001.,M5.1,13663.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-07T05:58Z. 
+
+Flare peak time: 2024-05-07T06:16Z.
+
+Flare intensity: M5.1 class.
+
+Source region: N27W47 (Active Region 13663) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240507-AL-003,FLR,2024-05-07 16:37:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-07T16:29Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240507-AL-004,FLR,2024-05-07 16:40:00+00:00,2024-05-07T16:21:00-FLR-001.,M8.2,13663.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-07T16:21Z. 
+
+Flare peak time: 2024-05-07T16:30Z.
+
+Flare intensity: M8.2 class.
+
+Source region: N25W56 (Active Region 13663) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-001,FLR,2024-05-08 01:43:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-08T01:39Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-002,FLR,2024-05-08 01:55:00+00:00,2024-05-08T01:33:00-FLR-001.,X1.0,13663.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-08T01:33Z. 
+
+Flare peak time: 2024-05-08T01:41Z.
+
+Flare intensity: X1.0 class.
+
+Source region: N25W60 (Active Region 13663) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-003,FLR,2024-05-08 04:55:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-08T04:49Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-004,FLR,2024-05-08 06:55:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-08T06:50Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-005,FLR,2024-05-08 11:53:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-08T11:47Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-006,FLR,2024-05-08 13:10:00+00:00,2024-05-08T04:37:00-FLR-001.,X1.0,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-08T04:37Z. 
+
+Flare peak time: 2024-05-08T05:09Z.
+
+Flare intensity: X1.0 class.
+
+Source region: S22W10 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-007,FLR,2024-05-08 13:36:00+00:00,2024-05-08T11:26:00-FLR-001.,M8.5,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-08T11:26Z. 
+
+Flare peak time: 2024-05-08T12:04Z.
+
+Flare intensity: M8.5 class.
+
+Source region: S20W11 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-008,FLR,2024-05-08 13:45:00+00:00,2024-05-08T06:44:00-FLR-001.,M7.0,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-08T06:44Z. 
+
+Flare peak time: 2024-05-08T06:53Z.
+
+Flare intensity: M7.0 class.
+
+Source region: S21W18 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-009,CME,2024-05-08 16:50:00+00:00,2024-05-08T12:24:00-CME-001,M8.6,,,,,,"C-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-08T12:24Z.
+
+Estimated speed: ~776 km/s.
+
+Estimated opening half-angle: 45 deg.
+
+Direction (lon./lat.): 3/-5 in Heliocentric E",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-010,FLR,2024-05-08 17:54:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-08T17:49Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-011,FLR,2024-05-08 18:06:00+00:00,2024-05-08T17:32:00-FLR-001.,M7.9,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-08T17:32Z. 
+
+Flare peak time: 2024-05-08T17:53Z.
+
+Flare intensity: M7.9 class.
+
+Source region: S17W13 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-012,CME,2024-05-08 18:43:00+00:00,2024-05-08T05:36:00-CME-001,M3.5,,,,,,"C-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-08T05:36Z.
+
+Estimated speed: ~870 km/s.
+
+Estimated opening half-angle: 43 deg.
+
+Direction (lon./lat.): 9/-7 in Heliocentric E",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-7D-001,REPORT,2024-05-08 21:58:00+00:00,,X1.0,13664.0,,,,,"Solar activity was at high levels during this reporting period with 4 X-class flares, 44 M-class flares, and 17 C-type CMEs (see details below).
+
+Based on preliminary analysis by the Moon to Mars Spac",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-013,FLR,2024-05-08 22:35:00+00:00,2024-05-08T21:00:00-FLR-001.,X1.0,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-08T21:00Z. 
+
+Flare peak time: 2024-05-08T21:40Z.
+
+Flare intensity: X1.0 class.
+
+Source region: S20W17 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240508-AL-014,FLR,2024-05-08 22:38:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-08T21:28Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240509-AL-001,FLR,2024-05-09 09:00:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-09T08:53Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240509-AL-002,FLR,2024-05-09 12:03:00+00:00,2024-05-09T08:45:00-FLR-001.,X2.2,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-09T08:45Z. 
+
+Flare peak time: 2024-05-09T09:13Z.
+
+Flare intensity: X2.2 class.
+
+Source region: S20W25 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240509-AL-003,FLR,2024-05-09 12:36:00+00:00,2024-05-08T22:05:00-FLR-001.,M9.8,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-08T22:05Z. 
+
+Flare peak time: 2024-05-08T22:27Z.
+
+Flare intensity: M9.8 class.
+
+Source region: S22W22 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240509-AL-004,SEP,2024-05-09 14:00:00+00:00,2024-05-09T13:59:00-SEP-001.,X2.2,13664.0,286.0,S3,>15.8 MeV,1000.0,"Solar energetic particle event forecasted at the orbit of SOHO starting at 2024-05-09T13:59Z.  The flux of one or more of the >15.8 MeV protons channels exceeds 10^(-1) pfu/MeV within next few hours.
+",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240509-AL-005,CME,2024-05-09 16:39:00+00:00,2024-05-08T19:12:00-CME-001,,,,,,,"C-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-08T19:12Z.
+
+Estimated speed: ~828 km/s.
+
+Estimated opening half-angle: 38 deg.
+
+Direction (lon./lat.): -23/3 in Heliocentric ",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240509-AL-006,CME,2024-05-09 17:04:00+00:00,2024-05-09T09:24:00-CME-001,X2.2,,,,,,"O-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-09T09:24Z.
+
+Estimated speed: ~1330 km/s.
+
+Estimated opening half-angle: 45 deg.
+
+Direction (lon./lat.): 19/-6 in Heliocentric",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240509-AL-007,FLR,2024-05-09 17:42:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-09T17:33Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240509-AL-008,FLR,2024-05-09 17:54:00+00:00,2024-05-09T17:23:00-FLR-001.,X1.1,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-09T17:23Z. 
+
+Flare peak time: 2024-05-09T17:44Z.
+
+Flare intensity: X1.1 class.
+
+Source region: S18W29 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240509-AL-009,CME,2024-05-09 20:03:00+00:00,2024-05-08T22:24:00-CME-001,X1.0,,,,,,"O-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-08T22:24Z.
+
+Estimated speed: ~1130 km/s.
+
+Estimated opening half-angle: 40 deg.
+
+Direction (lon./lat.): 12/-16 in Heliocentri",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240509-AL-010,CME,2024-05-09 21:24:00+00:00,2024-05-08T05:36:00-CME-001,M3.5,,,,,,"Update on CMEs with IDs 2024-05-08T05:36:00-CME-001 (see previous notification 20240508-AL-012), 2024-05-08T12:24:00-CME-001 (see previous notification 20240508-AL-009), 2024-05-08T19:12:00-CME-001 (s",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240509-AL-011,CME,2024-05-09 23:35:00+00:00,2024-05-09T18:23:00-CME-001,X1.1,3664.0,,,,,"C-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-09T18:23Z.
+
+Estimated speed: ~895 km/s.
+
+Estimated opening half-angle: 44 deg.
+
+Direction (lon./lat.): 30/-6 in Heliocentric ",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-001,FLR,2024-05-10 06:51:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-10T06:41Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-002,FLR,2024-05-10 11:37:00+00:00,2024-05-10T06:27:00-FLR-001.,X3.9,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-10T06:27Z. 
+
+Flare peak time: 2024-05-10T06:54Z.
+
+Flare intensity: X3.9 class.
+
+Source region: S18W37 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-003,CME,2024-05-10 13:38:00+00:00,2024-05-10T07:12:00-CME-001,X3.9,13664.0,,,,,"O-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-10T07:12Z.
+
+Estimated speed: ~1018 km/s.
+
+Estimated opening half-angle: 41 deg.
+
+Direction (lon./lat.): 31/-2 in Heliocentric",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-004,SEP,2024-05-10 13:46:00+00:00,2024-05-10T13:35:00-SEP-001.,,,30.0,S1,,10.0,"Solar energetic particle event detected by GOES.  The flux of > 10 MeV protons exceeds 10 pfu starting at 2024-05-10T13:35Z.
+
+NASA spacecraft at MEO, GEO and other high-altitude orbits and high-inclin",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-005,SEP,2024-05-10 14:12:00+00:00,2024-05-10T13:35:00-SEP-001.,M3.5,13664.0,30.0,S1,>15.8 MeV,10.0,"Solar energetic particle event detected by GOES and SOHO. At GOES, the flux of > 10 MeV protons exceeds 10 pfu starting at 2024-05-10T13:35Z.
+
+The flux of one or more of the >15.8 MeV protons channels",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-006,FLR,2024-05-10 14:15:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-10T14:08Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-007,FLR,2024-05-10 14:28:00+00:00,2024-05-10T13:58:00-FLR-001.,M5.9,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-10T13:58Z. 
+
+Flare peak time: 2024-05-10T14:11Z.
+
+Flare intensity: M5.9 class.
+
+Source region: S16W40 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-008,SEP,2024-05-10 15:03:00+00:00,2024-05-10T14:50:00-SEP-001.,,,30.0,S1,,10.0,"Solar energetic particle event detected by STEREO A.  The flux of 13-100 MeV protons exceeds 10^(-1) pfu/MeV starting at 2024-05-10T14:50Z.
+
+Activity ID: 2024-05-10T14:50:00-SEP-001.",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-009,SEP,2024-05-10 15:17:00+00:00,2024-05-10T14:50:00-SEP-001.,M3.5,13664.0,30.0,S1,,10.0,"Solar energetic particle event detected by STEREO A.  The flux of 13-100 MeV protons exceeds 10^(-1) pfu/MeV starting at 2024-05-10T14:50Z.
+
+Activity ID: 2024-05-10T14:50:00-SEP-001.",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-010,IPS,2024-05-10 17:01:00+00:00,2024-05-10T16:36:00-IPS-001.,,,,,,,"Significant interplanetary shock detected by ACE at L1 at 2024-05-10T16:36Z. 
+
+The shock is likely caused by the CME with ID 2024-05-07T03:12:00-CME-001, CME with ID 2024-05-07T05:24:00-CME-001 and/or",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-011,MPC,2024-05-10 17:33:00+00:00,2024-05-10T18:01:00-MPC-001.,,,,,,,Strong compression of the magnetosphere detected. Simulations carried out at NASA Community Coordinated Modeling Center indicate that the magnetopause separating magnetospheric and solar wind plasma i,NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-012,MPC,2024-05-10 17:39:00+00:00,2024-05-10T18:01:00-MPC-001.,,,,,,,Strong compression of the magnetosphere detected. Simulations carried out at NASA Community Coordinated Modeling Center indicate that the magnetopause separating magnetospheric and solar wind plasma i,NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-013,GST,2024-05-10 18:44:00+00:00,2024-05-10T15:00:00-GST-001.,,,,,,,"Ongoing space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 7.67 (severe) during the synoptic period 2024-05-10T15:00Z to 2024-05-10T18:00Z. 
+
+
+NASA spacecraft at ",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-014,GST,2024-05-10 19:19:00+00:00,2024-05-10T15:00:00-GST-001.,,,,,,,"Ongoing space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 7.67 (severe) during the synoptic period 2024-05-10T15:00Z to 2024-05-10T18:00Z. 
+
+The storm is caused ",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-015,GST,2024-05-10 21:35:00+00:00,2024-05-10T15:00:00-GST-001.,,,,,,,"Intensifying space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 8.67 (severe) during the synoptic period 2024-05-10T18:00Z to 2024-05-10T21:00Z. 
+
+The storm is ca",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-016,GST,2024-05-10 22:01:00+00:00,2024-05-10T15:00:00-GST-001.,,,,,,,"Intensifying space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 8.67 (severe) during the synoptic period 2024-05-10T18:00Z to 2024-05-10T21:00Z. 
+
+The storm is ca",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240510-AL-017,IPS,2024-05-10 22:24:00+00:00,2024-05-10T21:39:00-IPS-001.,,,,,,,"Significant interplanetary shock detected by DSCOVR at L1 at 2024-05-10T21:39Z. 
+
+The shock is likely caused by the arrival of CME with ID 2024-05-08T22:24:00-CME-001 (see notifications 20240509-AL-00",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-001,MPC,2024-05-11 00:12:00+00:00,2024-05-10T18:01:00-MPC-001.,,,,,,,Strong compression of the magnetosphere continues. Simulations carried out at NASA Community Coordinated Modeling Center indicate that the magnetopause separating magnetospheric and solar wind plasma ,NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-002,GST,2024-05-11 00:34:00+00:00,2024-05-10T15:00:00-GST-001.,,,,,,,"Intensifying space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 9 (extreme) during the synoptic period 2024-05-10T21:00Z to 2024-05-11T00:00Z. 
+
+The storm is caus",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-003,GST,2024-05-11 00:39:00+00:00,2024-05-10T15:00:00-GST-001.,,,,,,,"Intensifying space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 9 (extreme) during the synoptic period 2024-05-10T21:00Z to 2024-05-11T00:00Z. 
+
+The storm is caus",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-004,FLR,2024-05-11 01:27:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-11T01:15Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-005,FLR,2024-05-11 01:49:00+00:00,2024-05-11T01:10:00-FLR-001.,X5.8,,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-11T01:10Z. 
+
+Flare peak time: 2024-05-11T01:23Z.
+
+Flare intensity: X5.8 class.
+
+Source region: S17W47  (based on SDO imagery).
+
+Increased",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-006,SEP,2024-05-11 02:30:00+00:00,2024-05-11T02:10:00-SEP-001.,,,30.0,S1,,10.0,"Solar energetic particle event detected by GOES.  The flux of > 100 MeV protons exceeds 1 pfu starting at 2024-05-11T02:10Z.
+
+NASA Spacecraft at MEO, GEO and other high-altitude orbits and high-inclin",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-007,SEP,2024-05-11 02:46:00+00:00,2024-05-11T02:10:00-SEP-001.,X5.8,3664.0,47.0,S3,,1000.0,"Solar energetic particle event detected by GOES.  The flux of > 100 MeV protons exceeds 1 pfu starting at 2024-05-11T02:10Z.
+
+NASA Spacecraft at MEO, GEO and other high-altitude orbits and high-inclin",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-008,SEP,2024-05-11 04:13:00+00:00,2024-05-11T04:07:00-SEP-001.,,,30.0,S1,,10.0,"Solar energetic particle event detected by STEREO A.  The flux of 13-100 MeV protons exceeds 10^(-1) pfu/MeV starting at 2024-05-11T04:07Z.
+
+Activity ID: 2024-05-11T04:07:00-SEP-001.",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-009,CME,2024-05-11 04:50:00+00:00,2024-05-11T01:36:00-CME-001,X5.8,3664.0,,,,,"O-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-11T01:36Z.
+
+Estimated speed: ~1372 km/s.
+
+Estimated opening half-angle: 49 deg.
+
+Direction (lon./lat.): 47/-1 in Heliocentric",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-010,FLR,2024-05-11 11:37:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-11T11:31Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-011,FLR,2024-05-11 12:33:00+00:00,2024-05-11T11:15:00-FLR-001.,X1.5,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-11T11:15Z. 
+
+Flare peak time: 2024-05-11T11:44Z.
+
+Flare intensity: X1.5 class.
+
+Source region: S19W60 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-012,CME,2024-05-11 14:23:00+00:00,2024-05-11T01:36:00-CME-001,X5.8,3664.0,,,,,Update on CME with ID 2024-05-11T01:36:00-CME-001 (see previous notification 20240511-AL-009). Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modeling,NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-013,SEP,2024-05-11 15:03:00+00:00,2024-05-11T04:07:00-SEP-001.,X5.8,3664.0,164.0,S3,,1000.0,"Solar energetic particle event detected by STEREO A.  The flux of 13-100 MeV protons exceeds 10^(-1) pfu/MeV starting at 2024-05-11T04:07Z.
+
+Activity ID: 2024-05-11T04:07:00-SEP-001.",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-014,FLR,2024-05-11 15:13:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-11T15:09Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-015,GST,2024-05-11 15:14:00+00:00,2024-05-10T15:00:00-GST-001.,,,,,,,"Intensifying space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 9 (extreme) during the synoptic period 2024-05-11T09:00Z to 2024-05-11T12:00Z. 
+
+The storm is caus",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-016,FLR,2024-05-11 15:41:00+00:00,2024-05-11T14:46:00-FLR-001.,M8.8,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-11T14:46Z. 
+
+Flare peak time: 2024-05-11T15:25Z.
+
+Flare intensity: M8.8 class.
+
+Source region: S17W53 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240511-AL-017,CME,2024-05-11 20:49:00+00:00,2024-05-11T16:24:00-CME-001,M8.8,,,,,,"O-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-11T16:24Z.
+
+Estimated speed: ~1088 km/s.
+
+Estimated opening half-angle: 22 deg.
+
+Direction (lon./lat.): 53/-1 in Heliocentric",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240512-AL-001,CME,2024-05-12 13:30:00+00:00,2024-05-12T03:48:00-CME-001,,,,,,,"C-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-12T03:48Z.
+
+Estimated speed: ~602 km/s.
+
+Estimated opening half-angle: 47 deg.
+
+Direction (lon./lat.): 137/-39 in Heliocentri",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240512-AL-002,FLR,2024-05-12 16:25:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-12T16:20Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240512-AL-003,FLR,2024-05-12 16:37:00+00:00,2024-05-12T16:11:00-FLR-001.,X1.0,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-12T16:11Z. 
+
+Flare peak time: 2024-05-12T16:26Z.
+
+Flare intensity: X1.0 class.
+
+Source region: S21W75 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240512-AL-004,CME,2024-05-12 17:17:00+00:00,2024-05-11T16:24:00-CME-001,M8.8,13664.0,,,,,Update on CME with ID 2024-05-11T16:24:00-CME-001 (see previous notification 20240511-AL-017).  Based on preliminary analysis by the Moon to Mars Space Weather Analysis Office and heliospheric modelin,NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-001,GST,2024-05-13 00:34:00+00:00,2024-05-12T21:00:00-GST-001.,,,,,,,"Ongoing space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 6.33 (moderate) during the synoptic period 2024-05-12T21:00Z to 2024-05-13T00:00Z. 
+
+
+NASA spacecraft a",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-002,GST,2024-05-13 00:53:00+00:00,2024-05-12T21:00:00-GST-001.,,,,,,,"Ongoing space weather storm in the Earth's magnetosphere. Geomagnetic Kp index has reached level 6.33 (moderate) during the synoptic period 2024-05-12T21:00Z to 2024-05-13T00:00Z. 
+
+The storm is likel",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-003,FLR,2024-05-13 09:44:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-13T09:38Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-004,FLR,2024-05-13 12:34:00+00:00,2024-05-13T09:36:00-FLR-001.,M6.6,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-13T09:36Z. 
+
+Flare peak time: 2024-05-13T09:44Z.
+
+Flare intensity: M6.6 class.
+
+Source region: S17W77 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-005,SEP,2024-05-13 12:45:00+00:00,2024-05-13T13:10:00-SEP-001.,M1.2,13664.0,290.0,S1,>15.8 MeV,10.0,"Solar energetic particle event forecasted at the orbit of SOHO starting at 2024-05-13T13:10Z.  The flux of one or more of the >15.8 MeV protons channels exceeds 10^(-1) pfu/MeV within next few hours.
+",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-006,SEP,2024-05-13 12:54:00+00:00,2024-05-13T12:44:00-SEP-001.,,,30.0,S1,,10.0,"Solar energetic particle event detected by STEREO A.  The flux of 13-100 MeV protons exceeds 10^(-1) pfu/MeV starting at 2024-05-13T12:44Z.
+
+Activity ID: 2024-05-13T12:44:00-SEP-001.",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-007,SEP,2024-05-13 13:01:00+00:00,2024-05-13T12:44:00-SEP-001.,M1.2,13664.0,264.0,S1,,10.0,"Solar energetic particle event detected by STEREO A.  The flux of 13-100 MeV protons exceeds 10^(-1) pfu/MeV starting at 2024-05-13T12:44Z.
+
+Activity ID: 2024-05-13T12:44:00-SEP-001.",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-008,SEP,2024-05-13 14:09:00+00:00,2024-05-13T14:00:00-SEP-001.,,,30.0,S1,,10.0,"Solar energetic particle event detected by GOES.  The flux of > 10 MeV protons exceeds 10 pfu starting at 2024-05-13T14:00Z.
+
+NASA spacecraft at MEO, GEO and other high-altitude orbits and high-inclin",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-009,SEP,2024-05-13 14:16:00+00:00,2024-05-13T14:00:00-SEP-001.,M1.2,13664.0,340.0,S1,,10.0,"Solar energetic particle event detected by GOES. The flux of > 10 MeV protons exceeds 10 pfu starting at 2024-05-13T14:00Z.
+
+NASA spacecraft at MEO, GEO and other high-altitude orbits and high-inclina",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-010,SEP,2024-05-13 16:33:00+00:00,2024-05-13T16:19:00-SEP-001.,M1.2,13664.0,479.0,S1,>15.8 MeV,10.0,"Solar energetic particle event forecasted at the orbit of SOHO starting at 2024-05-13T16:19Z.  The flux of one or more of the >15.8 MeV protons channels exceeds 10^(-1) pfu/MeV within next few hours.
+",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-011,SEP,2024-05-13 18:39:00+00:00,2024-05-13T18:07:00-SEP-002.,M1.2,13664.0,587.0,S1,>15.8 MeV,10.0,"Solar energetic particle event detected by SOHO.  The flux of one or more of the >15.8 MeV protons channels exceeds 10^(-1) pfu/MeV starting at 2024-05-13T18:07Z.
+
+NASA spacecraft at the L1 and near-E",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240513-AL-012,CME,2024-05-13 19:09:00+00:00,2024-05-13T09:12:00-CME-001,M1.2,13664.0,,,,,"O-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-13T09:12Z.
+
+Estimated speed: ~1456 km/s.
+
+Estimated opening half-angle: 49 deg.
+
+Direction (lon./lat.): 72/-36 in Heliocentri",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240514-AL-001,FLR,2024-05-14 02:10:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-14T02:06Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240514-AL-002,FLR,2024-05-14 02:26:00+00:00,2024-05-14T02:03:00-FLR-001.,X1.7,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-14T02:03Z. 
+
+Flare peak time: 2024-05-14T02:09Z.
+
+Flare intensity: X1.7 class.
+
+Source region: S19W89 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240514-AL-003,FLR,2024-05-14 12:54:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-14T12:49Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240514-AL-004,FLR,2024-05-14 13:04:00+00:00,2024-05-14T12:40:00-FLR-001.,X1.2,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-14T12:40Z. 
+
+Flare peak time: 2024-05-14T12:55Z.
+
+Flare intensity: X1.2 class.
+
+Source region: S19W90 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240514-AL-005,CME,2024-05-14 16:38:00+00:00,2024-05-14T02:24:00-CME-001,X1.7,,,,,,"Multiple CMEs have been detected as follows:
+1: C-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-14T02:24Z.
+
+Estimated speed: ~502 km/s.
+
+Estimated opening half-angle: 34 deg",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240514-AL-006,FLR,2024-05-14 16:52:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-14T16:47Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240514-AL-007,FLR,2024-05-14 17:00:00+00:00,2024-05-14T16:46:00-FLR-001.,X8.7,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-14T16:46Z. 
+
+Flare peak time: 2024-05-14T16:51Z.
+
+Flare intensity: X8.7 class.
+
+Source region: S19W90 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240514-AL-008,CME,2024-05-14 18:58:00+00:00,2024-05-14T10:09:00-CME-001,,,,,,,"C-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-14T10:09Z.
+
+Estimated speed: ~744 km/s.
+
+Estimated opening half-angle: 34 deg.
+
+Direction (lon./lat.): -34/41 in Heliocentric",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240514-AL-009,CME,2024-05-14 20:14:00+00:00,2024-05-14T04:48:00-CME-001,,,,,,,"C-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-14T04:48Z.
+
+Estimated speed: ~567 km/s.
+
+Estimated opening half-angle: 38 deg.
+
+Direction (lon./lat.): -90/-24 in Heliocentri",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240514-AL-010,CME,2024-05-14 22:03:00+00:00,2024-05-14T17:00:00-CME-001,X8.7,3664.0,,,,,"R-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-14T17:00Z.
+
+Estimated speed: ~2119 km/s.
+
+Estimated opening half-angle: 37 deg.
+
+Direction (lon./lat.): 96/3 in Heliocentric ",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240515-AL-001,CME,2024-05-15 00:21:00+00:00,2024-05-14T17:00:00-CME-001,X8.7,3664.0,,,,,"Update on CME with ID 2024-05-14T17:00:00-CME-001 (see previous notification 20240514-AL-010). This CME was very closely followed by CME with ID 2024-05-14T17:30:00-CME-001.  
+
+Based on preliminary an",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240515-AL-002,FLR,2024-05-15 08:36:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-15T08:30Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240515-AL-003,FLR,2024-05-15 12:29:00+00:00,2024-05-15T08:18:00-FLR-001.,X3.4,13664.0,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-15T08:18Z. 
+
+Flare peak time: 2024-05-15T08:37Z.
+
+Flare intensity: X3.4 class.
+
+Source region: S20W90 (Active Region 13664) (based on SDO",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240515-AL-004,CME,2024-05-15 13:44:00+00:00,2024-05-14T17:48:00-CME-001,M4.4,,,,,,"O-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-14T17:48Z.
+
+Estimated speed: ~1292 km/s.
+
+Estimated opening half-angle: 43 deg.
+
+Direction (lon./lat.): -72/16 in Heliocentri",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240515-AL-005,RBE,2024-05-15 14:02:00+00:00,2024-05-15T13:55:00-RBE-001.,,,,,,,"Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES ""greater than 2.0 MeV"" integral electron flux is above 1000 pfu starting at 2024-05-15T13:55Z. 
+
+
+NASA spacec",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240515-AL-006,FLR,2024-05-15 14:30:00+00:00,,,,,,,,"Significant flare detected by GOES.  Flare intensity has crossed the threshold of M5.0.
+
+Flare M5.0 crossing time: 2024-05-15T14:25Z. 
+
+Increased energetic proton fluxes possible. Updates on this even",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240515-AL-007,RBE,2024-05-15 14:32:00+00:00,2024-05-15T13:55:00-RBE-001.,,,,,,,"Significantly elevated energetic electron fluxes in the Earth's outer radiation belt. GOES ""greater than 2.0 MeV"" integral electron flux is above 1000 pfu starting at 2024-05-15T13:55Z. 
+
+The elevated",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240515-AL-008,FLR,2024-05-15 15:15:00+00:00,2024-05-15T14:20:00-FLR-001.,X2.9,,,,,,"Significant flare detected by GOES.
+
+Flare start time: 2024-05-15T14:20Z. 
+
+Flare peak time: 2024-05-15T14:38Z.
+
+Flare intensity: X2.9 class.
+
+Source region: S12E90 (based on SDO imagery).
+
+Increased ",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240515-AL-009,CME,2024-05-15 17:09:00+00:00,2024-05-15T08:36:00-CME-001,,,,,,,"O-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-15T08:36Z.
+
+Estimated speed: ~1766 km/s.
+
+Estimated opening half-angle: 31 deg.
+
+Direction (lon./lat.): 105/2 in Heliocentric",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240515-AL-010,CME,2024-05-15 17:25:00+00:00,2024-05-15T08:48:00-CME-001,X3.4,13664.0,,,,,"O-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-15T08:48Z.
+
+Estimated speed: ~1082 km/s.
+
+Estimated opening half-angle: 24 deg.
+
+Direction (lon./lat.): 114/-29 in Heliocentr",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment
+20240515-AL-011,CME,2024-05-15 23:16:00+00:00,2024-05-15T10:00:00-CME-001,,,,,,,"O-type CME detected by STEREO A / SOHO. 
+
+Start time of the event: 2024-05-15T10:00Z.
+
+Estimated speed: ~1205 km/s.
+
+Estimated opening half-angle: 37 deg.
+
+Direction (lon./lat.): 113/-6 in Heliocentri",NASA CCMC DONKI (api.nasa.gov/DONKI),research reference,measured,True,Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment

@@ -1,0 +1,217 @@
+[
+  {
+    "test_case_id": "tc_radiation_scenario_spe_20240509-AL-004",
+    "scenario": {
+      "scenario_id": "scenario_spe_20240509-AL-004",
+      "title": "Solar Particle Event (S3 - X2.2 Flare)",
+      "hazard_type": "solar_particle_event",
+      "noaa_scale": "S3",
+      "associated_flare_class": "X2.2",
+      "warning_lead_time_minutes": 286.0,
+      "peak_flux_pfu": 1000.0,
+      "duration_hours": 24.0,
+      "recommended_action": "seek_radiation_shelter",
+      "shelter_protection_factor": 0.9,
+      "affected_systems": [
+        "crew_safety",
+        "crop_lighting",
+        "eva_readiness",
+        "radiation_monitoring"
+      ],
+      "provenance": {
+        "source": "NASA CCMC DONKI (api.nasa.gov/DONKI)",
+        "activity_id": "2024-05-09T13:59:00-SEP-001.",
+        "classification": "research reference",
+        "origin_type": "measured",
+        "v1_safe": true,
+        "caveats": "Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment"
+      }
+    },
+    "expected_calculations": {
+      "shelter_immediate": {
+        "total_dose_msv": 3.754,
+        "total_dose_usv": 3753.72
+      },
+      "shelter_delayed_45min": {
+        "total_dose_msv": 3.873,
+        "total_dose_usv": 3873.16
+      },
+      "no_shelter": {
+        "total_dose_msv": 31.37,
+        "total_dose_usv": 31370.4
+      }
+    }
+  },
+  {
+    "test_case_id": "tc_radiation_scenario_spe_20240510-AL-004",
+    "scenario": {
+      "scenario_id": "scenario_spe_20240510-AL-004",
+      "title": "Solar Particle Event (S1)",
+      "hazard_type": "solar_particle_event",
+      "noaa_scale": "S1",
+      "associated_flare_class": null,
+      "warning_lead_time_minutes": 30.0,
+      "peak_flux_pfu": 10.0,
+      "duration_hours": 12.0,
+      "recommended_action": "seek_radiation_shelter",
+      "shelter_protection_factor": 0.9,
+      "affected_systems": [
+        "crew_safety",
+        "crop_lighting",
+        "eva_readiness",
+        "radiation_monitoring"
+      ],
+      "provenance": {
+        "source": "NASA CCMC DONKI (api.nasa.gov/DONKI)",
+        "activity_id": "2024-05-10T13:35:00-SEP-001.",
+        "classification": "research reference",
+        "origin_type": "measured",
+        "v1_safe": true,
+        "caveats": "Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment"
+      }
+    },
+    "expected_calculations": {
+      "shelter_immediate": {
+        "total_dose_msv": 0.467,
+        "total_dose_usv": 466.86
+      },
+      "shelter_delayed_45min": {
+        "total_dose_msv": 0.504,
+        "total_dose_usv": 503.8
+      },
+      "no_shelter": {
+        "total_dose_msv": 1.585,
+        "total_dose_usv": 1585.2
+      }
+    }
+  },
+  {
+    "test_case_id": "tc_radiation_scenario_spe_20240510-AL-005",
+    "scenario": {
+      "scenario_id": "scenario_spe_20240510-AL-005",
+      "title": "Solar Particle Event (S1 - M3.5 Flare)",
+      "hazard_type": "solar_particle_event",
+      "noaa_scale": "S1",
+      "associated_flare_class": "M3.5",
+      "warning_lead_time_minutes": 30.0,
+      "peak_flux_pfu": 10.0,
+      "duration_hours": 12.0,
+      "recommended_action": "seek_radiation_shelter",
+      "shelter_protection_factor": 0.9,
+      "affected_systems": [
+        "crew_safety",
+        "crop_lighting",
+        "eva_readiness",
+        "radiation_monitoring"
+      ],
+      "provenance": {
+        "source": "NASA CCMC DONKI (api.nasa.gov/DONKI)",
+        "activity_id": "2024-05-10T13:35:00-SEP-001.",
+        "classification": "research reference",
+        "origin_type": "measured",
+        "v1_safe": true,
+        "caveats": "Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment"
+      }
+    },
+    "expected_calculations": {
+      "shelter_immediate": {
+        "total_dose_msv": 0.467,
+        "total_dose_usv": 466.86
+      },
+      "shelter_delayed_45min": {
+        "total_dose_msv": 0.504,
+        "total_dose_usv": 503.8
+      },
+      "no_shelter": {
+        "total_dose_msv": 1.585,
+        "total_dose_usv": 1585.2
+      }
+    }
+  },
+  {
+    "test_case_id": "tc_radiation_scenario_spe_20240510-AL-008",
+    "scenario": {
+      "scenario_id": "scenario_spe_20240510-AL-008",
+      "title": "Solar Particle Event (S1)",
+      "hazard_type": "solar_particle_event",
+      "noaa_scale": "S1",
+      "associated_flare_class": null,
+      "warning_lead_time_minutes": 30.0,
+      "peak_flux_pfu": 10.0,
+      "duration_hours": 12.0,
+      "recommended_action": "seek_radiation_shelter",
+      "shelter_protection_factor": 0.9,
+      "affected_systems": [
+        "crew_safety",
+        "crop_lighting",
+        "eva_readiness",
+        "radiation_monitoring"
+      ],
+      "provenance": {
+        "source": "NASA CCMC DONKI (api.nasa.gov/DONKI)",
+        "activity_id": "2024-05-10T14:50:00-SEP-001.",
+        "classification": "research reference",
+        "origin_type": "measured",
+        "v1_safe": true,
+        "caveats": "Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment"
+      }
+    },
+    "expected_calculations": {
+      "shelter_immediate": {
+        "total_dose_msv": 0.467,
+        "total_dose_usv": 466.86
+      },
+      "shelter_delayed_45min": {
+        "total_dose_msv": 0.504,
+        "total_dose_usv": 503.8
+      },
+      "no_shelter": {
+        "total_dose_msv": 1.585,
+        "total_dose_usv": 1585.2
+      }
+    }
+  },
+  {
+    "test_case_id": "tc_radiation_scenario_spe_20240510-AL-009",
+    "scenario": {
+      "scenario_id": "scenario_spe_20240510-AL-009",
+      "title": "Solar Particle Event (S1 - M3.5 Flare)",
+      "hazard_type": "solar_particle_event",
+      "noaa_scale": "S1",
+      "associated_flare_class": "M3.5",
+      "warning_lead_time_minutes": 30.0,
+      "peak_flux_pfu": 10.0,
+      "duration_hours": 12.0,
+      "recommended_action": "seek_radiation_shelter",
+      "shelter_protection_factor": 0.9,
+      "affected_systems": [
+        "crew_safety",
+        "crop_lighting",
+        "eva_readiness",
+        "radiation_monitoring"
+      ],
+      "provenance": {
+        "source": "NASA CCMC DONKI (api.nasa.gov/DONKI)",
+        "activity_id": "2024-05-10T14:50:00-SEP-001.",
+        "classification": "research reference",
+        "origin_type": "measured",
+        "v1_safe": true,
+        "caveats": "Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment"
+      }
+    },
+    "expected_calculations": {
+      "shelter_immediate": {
+        "total_dose_msv": 0.467,
+        "total_dose_usv": 466.86
+      },
+      "shelter_delayed_45min": {
+        "total_dose_msv": 0.504,
+        "total_dose_usv": 503.8
+      },
+      "no_shelter": {
+        "total_dose_msv": 1.585,
+        "total_dose_usv": 1585.2
+      }
+    }
+  }
+]
