@@ -1,0 +1,166 @@
+{
+  "pipelineCommit": "2a8a27595b94d3b44d5a28e6a42fde5be1301d81",
+  "crewSize": 4,
+  "parameters": {
+    "overall_iss_water_recovery_milestone": {
+      "parameter_id": "overall_iss_water_recovery_milestone",
+      "resource": "water",
+      "flow_type": "recovery",
+      "value": 98.0,
+      "unit": "percent",
+      "basis": "total",
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "NASA Achieves Water Recovery Milestone on International Space Station",
+        "url": "https://www.nasa.gov/missions/station/iss-research/nasa-achieves-water-recovery-milestone-on-international-space-station/",
+        "identifier": "NASA ISS ECLSS Milestone 2023",
+        "location": "Brine Processor Assembly (BPA) Telemetry Report"
+      },
+      "assumptions": [],
+      "caveats": [
+        "System-level milestone, NOT a guaranteed per-subsystem rate. Do not use as the gameplay default for every stream."
+      ]
+    },
+    "crew_oxygen_consumption": {
+      "parameter_id": "crew_oxygen_consumption",
+      "resource": "oxygen",
+      "flow_type": "consumption",
+      "value": 0.89,
+      "unit": "kg",
+      "basis": "per_person",
+      "period": {
+        "value": 1,
+        "unit": "day"
+      },
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "82 kg reference astronaut model incl. 90 min exercise"
+      },
+      "assumptions": [],
+      "caveats": [
+        "Canonical alias for daily_o2_requirement_per_astronaut (simulation-parameter-sheet.md \u00a73.1)"
+      ]
+    },
+    "crew_co2_production": {
+      "parameter_id": "crew_co2_production",
+      "resource": "co2",
+      "flow_type": "production",
+      "value": 1.08,
+      "unit": "kg",
+      "basis": "per_person",
+      "period": {
+        "value": 1,
+        "unit": "day"
+      },
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "82 kg reference astronaut CO\u2082 production rate"
+      },
+      "assumptions": [],
+      "caveats": [
+        "Canonical alias for daily_co2_production_per_astronaut (simulation-parameter-sheet.md \u00a73.1)"
+      ]
+    },
+    "crew_water_requirement": {
+      "parameter_id": "crew_water_requirement",
+      "resource": "water",
+      "flow_type": "requirement",
+      "value": 5.03,
+      "unit": "kg",
+      "basis": "per_person",
+      "period": {
+        "value": 1,
+        "unit": "day"
+      },
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563",
+        "location": "Total daily water requirement per astronaut (drinking + food preparation + hygiene)"
+      },
+      "assumptions": [],
+      "caveats": [
+        "Canonical alias for daily_water_requirement_per_astronaut (simulation-parameter-sheet.md \u00a73.2)",
+        "Value includes potable water, food rehydration, and hygiene water"
+      ]
+    },
+    "crew_food_mass": {
+      "parameter_id": "crew_food_mass",
+      "resource": "food",
+      "flow_type": "consumption",
+      "value": 2.39,
+      "unit": "kg",
+      "basis": "per_person",
+      "period": {
+        "value": 1,
+        "unit": "day"
+      },
+      "classification": "research_data",
+      "data_status": "pending_review",
+      "source": {
+        "title": "Astronaut Mass Balance for Long Duration Missions",
+        "url": "https://ntrs.nasa.gov/citations/20190027563",
+        "identifier": "NASA NTRS 20190027563 / BVAD Table 4-53",
+        "location": "Packaged food mass per astronaut per day"
+      },
+      "assumptions": [],
+      "caveats": [
+        "Canonical alias for packaged_food_per_astronaut (simulation-parameter-sheet.md \u00a73.6)"
+      ]
+    }
+  },
+  "donki": {
+    "scenario_id": "scenario_spe_20240509-AL-004",
+    "title": "Solar Particle Event (S3 - X2.2 Flare)",
+    "hazard_type": "solar_particle_event",
+    "noaa_scale": "S3",
+    "associated_flare_class": "X2.2",
+    "warning_lead_time_minutes": 286.0,
+    "peak_flux_pfu": 1000.0,
+    "duration_hours": 24.0,
+    "recommended_action": "seek_radiation_shelter",
+    "shelter_protection_factor": 0.9,
+    "affected_systems": [
+      "crew_safety",
+      "crop_lighting",
+      "eva_readiness",
+      "radiation_monitoring"
+    ],
+    "provenance": {
+      "source": "NASA CCMC DONKI (api.nasa.gov/DONKI)",
+      "activity_id": "2024-05-09T13:59:00-SEP-001.",
+      "classification": "research reference",
+      "origin_type": "measured",
+      "v1_safe": true,
+      "caveats": "Near-Earth/L1 space weather telemetry; extrapolated to lunar surface radiation environment"
+    }
+  },
+  "radlab": {
+    "recordId": "radlab_lunar_gcr_001",
+    "measurementTarget": "Silicon detector",
+    "absorbedDoseRate": 13.2,
+    "uncertainty": 1.0,
+    "reference": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7518862/",
+    "iss": {
+      "instrument": "DosTel2",
+      "timestamp": "2022-04-01T23:00:00",
+      "absorbedDoseRate": 10.2160856666667,
+      "source": "https://visualization.osdr.nasa.gov/radlab/api/?spacecraft=ISS&instrument=DosTel&timestamp%3E=2022-04-01T23%3A00&timestamp%3C2022-04-01T23%3A05&absorbed_dose_rate&format=json"
+    }
+  },
+  "osdr": {
+    "studyId": "OSD-269",
+    "title": "Microbiological and nutritional analysis of lettuce crops grown on the International Space Station-VEG03A"
+  }
+}

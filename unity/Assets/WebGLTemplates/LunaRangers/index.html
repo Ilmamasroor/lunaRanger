@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1220">
+  <title>LunaRangers | Lunar Outpost</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100dvh; display: grid; place-items: center; color: #f3f8ff; background: radial-gradient(ellipse at 50% 0%, #1c3049, #0a1220 66%); font: 16px system-ui, sans-serif; }
+    main { width: min(1500px, calc(100vw - 32px), calc((100dvh - 88px) * 16 / 9)); }
+    header { display: flex; align-items: center; justify-content: space-between; min-height: 58px; gap: 12px; }
+    h1 { margin: 0; font-size: clamp(22px, 3vw, 31px); letter-spacing: -.04em; }
+    h1 span { color: #65e0ee; }
+    button { border: 1px solid #3e5b77; border-radius: 8px; padding: 8px 12px; background: #17283e; color: #f3f8ff; font: inherit; cursor: pointer; }
+    button:hover { background: #243d58; }
+    :focus-visible { outline: 2px solid #ffc159; outline-offset: 3px; }
+    #unity-container { position: relative; width: 100%; aspect-ratio: 16 / 9; border: 1px solid #3e5b77; border-radius: 14px; overflow: hidden; background: #0e192c; box-shadow: 0 20px 65px #04081280; }
+    #unity-container:fullscreen { border: 0; border-radius: 0; }
+    #unity-canvas { display: block; width: 100%; height: 100%; }
+    #unity-loading-bar { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 12px; padding: 24px; text-align: center; background: #0e192c; }
+    progress { width: min(240px, 50vw); height: 8px; accent-color: #65e0ee; }
+    #unity-warning { margin: 0; color: #ffc159; }
+    @media (orientation: portrait) { main { width: calc(100vw - 24px); } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Luna<span>Rangers</span></h1>
+      <button id="unity-fullscreen-button" type="button">Full screen</button>
+    </header>
+    <div id="unity-container">
+      <canvas id="unity-canvas" width="1280" height="720" tabindex="0" aria-label="LunaRangers lunar outpost game"></canvas>
+      <div id="unity-loading-bar" role="status">
+        <strong id="unity-status">Loading the lunar outpost</strong>
+        <progress id="unity-progress" max="1" value="0" aria-label="Game loading"></progress>
+        <p id="unity-warning"></p>
+      </div>
+    </div>
+  </main>
+  <script>
+    const canvas = document.querySelector("#unity-canvas");
+    const container = document.querySelector("#unity-container");
+    const loading = document.querySelector("#unity-loading-bar");
+    const progress = document.querySelector("#unity-progress");
+    const fullscreen = document.querySelector("#unity-fullscreen-button");
+    const build = "Build/";
+    function showError(message) {
+      loading.style.display = "grid";
+      document.querySelector("#unity-status").textContent = "The outpost could not load";
+      document.querySelector("#unity-warning").textContent = message;
+      progress.hidden = true;
+    }
+    fullscreen.addEventListener("click", async () => {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else await container.requestFullscreen();
+      canvas.focus();
+    });
+    canvas.addEventListener("pointerdown", () => canvas.focus());
+    const script = document.createElement("script");
+    script.src = build + "{{{ LOADER_FILENAME }}}";
+    script.onerror = () => showError("Reload the page to try again.");
+    script.onload = () => {
+      createUnityInstance(canvas, {
+        dataUrl: build + "{{{ DATA_FILENAME }}}",
+        frameworkUrl: build + "{{{ FRAMEWORK_FILENAME }}}",
+        codeUrl: build + "{{{ CODE_FILENAME }}}",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Neural Knights",
+        productName: "LunaRangers",
+        productVersion: "{{{ PRODUCT_VERSION }}}",
+        devicePixelRatio: Math.min(window.devicePixelRatio || 1, 2),
+        errorHandler: (message) => {
+          showError(message);
+          return true;
+        }
+      }, value => { progress.value = value; })
+        .then(() => { loading.style.display = "none"; })
+        .catch(showError);
+    };
+    document.body.append(script);
+  </script>
+</body>
+</html>

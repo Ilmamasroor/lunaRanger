@@ -1,0 +1,47 @@
+export const AVATARS = [
+  { id: 'male', emoji: '👨‍🚀', label: 'Cadet Leo' },
+  { id: 'female', emoji: '👩‍🚀', label: 'Cadet Maya' },
+  { id: 'neutral', emoji: '🧑‍🚀', label: 'Cadet Nova' },
+  { id: 'robot', emoji: '🤖', label: 'Rover Bot' },
+];
+
+const days = [
+  ['Restore heat', '🔥', 'Retrieve the spare battery and reconnect the heater wires.',
+    ['Step outside', 'Pick up the spare battery', 'Return to the habitat', 'Dock the battery', 'Reconnect the heater wires'],
+    'Airlock', 'A chamber that lets the crew move between the pressurized habitat and the outside.',
+    'The heater needs power from the battery.'],
+  ['Balance the power', '⚡', 'Route limited backup power in the west workshop.',
+    ['Route backup power'],
+    'Battery', 'A battery stores energy for when the outpost has less sunlight.',
+    'Stored energy keeps essential equipment working when sunlight is limited.'],
+  ['Restore water', '💧', 'Find the filter and restore flow through the east lab recycler.',
+    ['Repair the water line', 'Start the recycler'],
+    'Water recycler', 'A system that cleans used water so the crew can use it again.',
+    'Rerouting water through the filter restored the crew’s reserve.'],
+  ['Make the air safe', '🫧', 'Fit a new filter in the east lab air scrubber.',
+    ['Fit a replacement filter'],
+    'Air scrubber', 'Equipment that removes carbon dioxide from the air the crew breathes.',
+    'Replacing the filter helped keep the cabin air safe.'],
+  ['Shield the crew', '🛡️', 'Set up the crew shelter in the west workshop during a training solar alert.',
+    ['Set up the shelter'],
+    'Solar alert', 'Solar activity can send energetic particles into space. A shielded shelter helps protect the crew.',
+    'Shielding gives the crew a safer place to wait during a solar alert.'],
+  ['Excavate a Moon rock', '⛏️', 'Check your suit, collect a sample, and return before the training timer expires.',
+    ['Check your suit', 'Start the moonwalk', 'Scan and excavate', 'Return with the sample'],
+    'Excavate', 'Dig carefully around the rock so you can lift the sample.',
+    'You collected a Moon rock and returned safely through the airlock.'],
+  ['Catalog the samples', '🪨', 'Sort the samples and file the mission report in the east lab.',
+    ['Sort and store samples', 'File the mission report'],
+    'Catalog', 'Record what you collected so someone else can find and study it.',
+    'The sample is stored, and the crew and habitat checks are complete.'],
+];
+
+export const MISSION_DAYS = days.map(([title, icon, subtitle, checklist, topic, fact, learningTakeaway], index) => ({
+  day: index + 1,
+  title,
+  icon,
+  subtitle,
+  checklist,
+  knowledgeBubbles: [{ id: 'topic', icon, title: topic, badge: 'Mission term', fact }],
+  learningTakeaway,
+}));
