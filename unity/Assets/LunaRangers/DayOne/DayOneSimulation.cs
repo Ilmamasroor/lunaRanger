@@ -7,6 +7,7 @@ namespace LunaRangers.DayOne
     public sealed class DayOneSimulation
     {
         public const float SuitLimitSeconds = 10f;
+        public const int WireCount = 3;
         private const int RecoveryCost = 10;
         private const int ExposurePenalty = 20;
 
@@ -59,7 +60,7 @@ namespace LunaRangers.DayOne
 
         public bool TryConnect(int plug, int socket)
         {
-            if (Step != MissionStep.Repair || plug < 0 || plug > 1 || plug != socket)
+            if (Step != MissionStep.Repair || plug < 0 || plug >= WireCount || plug != socket)
                 return false;
 
             int wire = 1 << plug;
@@ -67,7 +68,7 @@ namespace LunaRangers.DayOne
                 return false;
 
             ConnectedWires |= wire;
-            if (ConnectedWires == 3)
+            if (ConnectedWires == (1 << WireCount) - 1)
                 Step = MissionStep.Complete;
             return true;
         }
